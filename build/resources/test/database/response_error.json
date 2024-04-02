@@ -1,9 +1,8 @@
 {
   "errors": [
     {
-      "reason": "#(reason)",
+      "httpStatus": "#number",
       "domain": "#(domain)",
-      "code": "#(code)",
       "message": "#(message)"
     }
   ]

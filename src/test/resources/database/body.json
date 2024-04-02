@@ -1,0 +1,62 @@
+{
+  "loginRequest": {
+    "login": {
+      "username": "prueba1",
+      "password": "123456789"
+    }
+  },"loginRequestUsernameInvalid": {
+  "login": {
+    "username": "prueba1222",
+    "password": "123456789"
+  }
+},"loginRequestPasswordInvalid": {
+  "login": {
+    "username": "prueba1",
+    "password": "1234567891111"
+  }
+},
+  "updatePasswordRequest": {
+    "password": "123456789"
+  },
+  "userNew": {
+    "user": {
+      "username": "prueba10",
+      "password": "123456789",
+      "email": "prueba10@prueba.com"
+    }
+  },
+  "userNewNotUsername": {
+    "user": {
+      "password": "123456789",
+      "email": "prueba10@prueba.com"
+    }
+  },
+  "userNewNotEmail": {
+    "user": {
+      "username": "prueba10",
+      "password": "123456789"
+    }
+  },
+  "userNewNotPassword": {
+    "user": {
+      "username": "prueba10",
+      "email": "prueba10@prueba.com"
+    }
+  },
+  "userUpdate": {
+    "user": {
+      "id": "660b711e8306ec2895e3b3c4",
+      "username": "prueba1",
+      "password": "123456789",
+      "email": "prueba1@prueba.com"
+    }
+  },
+  "userUpdateFailed": {
+    "user": {
+      "id": "660b711e8306ec2895e3b3c4222",
+      "username": "prueba1",
+      "password": "123456789",
+      "email": "prueba1@prueba.com"
+    }
+  }
+}

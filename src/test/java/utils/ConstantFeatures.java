@@ -1,6 +1,6 @@
 package utils;
 
 public class ConstantFeatures {
-    public static final String VALIDATE_BUSINESS_RULES = "validate_business_rules";
+    public static final String USER_MANAGEMENT = "user_management";;
 
 }
