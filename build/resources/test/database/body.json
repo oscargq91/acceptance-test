@@ -20,7 +20,7 @@
   },
   "userNew": {
     "user": {
-      "username": "prueba10",
+      "username": "#(username)",
       "password": "123456789",
       "email": "prueba10@prueba.com"
     }

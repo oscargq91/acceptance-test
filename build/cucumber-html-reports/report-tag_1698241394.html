@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>02 abr 2024, 16:13</td>
+      <td>02 abr 2024, 16:35</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@AddUserSuccessfully</td>
-          <td      class="passed"    >9</td>
+          <td      class="passed"    >11</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">9</td>
+          <td class="total">11</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="27143500">0.027</td>
+          <td class="duration" data-value="124476300">0.124</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.027</span>
+  <span class="lead-duration duration">0.124</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -247,6 +247,71 @@ $(document).ready(function() {
       <div class="step">
 
 
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">def username = KarateHelper.generateRandomName()</span>
+
+  <span class="lead-duration duration">0.097</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-* passed">
+  <span class="keyword indention">*</span>
+  <span class="name">print 'Nombre generado:', username</span>
+
+  <span class="lead-duration duration">0.002</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>16:35:46.766 [print] Nombre generado: Ms. Freeman Sauer 
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">request requestBody.userNew</span>
@@ -278,7 +343,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -292,25 +357,25 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>16:13:51.530 request:
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>16:35:46.767 request:
 1 &gt; POST http://localhost:8080/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 85
+1 &gt; Content-Length: 88
 1 &gt; Host: localhost:8080
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;username&quot;:&quot;prueba10&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
+{&quot;user&quot;:{&quot;username&quot;:&quot;#(username)&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
 
-16:13:51.537 response time in milliseconds: 7
+16:35:46.774 response time in milliseconds: 6
 1 &lt; 201
 1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 117
-{&quot;user&quot;:{&quot;id&quot;:&quot;660c750f53a85b3aecb250f9&quot;,&quot;username&quot;:&quot;prueba10&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
+1 &lt; Content-Length: 120
+{&quot;user&quot;:{&quot;id&quot;:&quot;660c7a3253a85b3aecb25107&quot;,&quot;username&quot;:&quot;#(username)&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
 
 </pre>
       </div>
@@ -439,7 +504,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">path usersPath + '/' + id</span>
 
-  <span class="lead-duration duration">0.005</span>
+  <span class="lead-duration duration">0.006</span>
 
 </div>
 
@@ -466,7 +531,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Delete</span>
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -480,19 +545,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>16:13:51.547 request:
-2 &gt; DELETE http://localhost:8080/api/v1/users/660c750f53a85b3aecb250f9
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>16:35:46.784 request:
+2 &gt; DELETE http://localhost:8080/api/v1/users/660c7a3253a85b3aecb25107
 2 &gt; Host: localhost:8080
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-16:13:51.555 response time in milliseconds: 8
+16:35:46.790 response time in milliseconds: 5
 2 &lt; 204
 
 

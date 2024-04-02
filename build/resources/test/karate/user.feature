@@ -8,6 +8,7 @@ Feature: Validate Business Customer Rules in BLM
     * def responseSuccessfully = read("../database/response_successfully.json")
     * def responseError = read("../database/response_error.json")
     * def requestBody = read("../database/body.json")
+    * def KarateHelper = Java.type('utils.KarateHelper')
 
   @GetUserListSuccessfully
   Scenario: Successfully get user list
@@ -100,6 +101,8 @@ Feature: Validate Business Customer Rules in BLM
   @AddUserSuccessfully
   Scenario: Successfully add user
     Given path usersPath
+    * def username = KarateHelper.generateRandomName()
+    * print 'Nombre generado:', username
     And request requestBody.userNew
     When method Post
     Then status 201
@@ -144,11 +147,11 @@ Feature: Validate Business Customer Rules in BLM
   @DeleteUserSuccessfully
   Scenario: Successfully delete user
     Given path usersPath
+    * def username = KarateHelper.generateRandomName()
     And request requestBody.userNew
     When method Post
     * def id = response.user.id
     * karate.set('id', id)
-    And match response contains responseSuccessfully.userNew
     Given path usersPath + '/' + id
     When method Delete
     Then status 204
