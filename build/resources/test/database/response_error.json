@@ -1,0 +1,10 @@
+{
+  "errors": [
+    {
+      "reason": "#(reason)",
+      "domain": "#(domain)",
+      "code": "#(code)",
+      "message": "#(message)"
+    }
+  ]
+}

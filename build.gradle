@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
+}
+
+ext {
+    karateVersion = '1.3.1'
+    cucumberReportVersion = '5.7.5'
+}
+
+dependencies {
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    implementation 'com.intuit.karate:karate-parent:1.4.0.RC3'
+    testImplementation "com.intuit.karate:karate-junit5:${karateVersion}"
+    testImplementation "net.masterthought:cucumber-reporting:${cucumberReportVersion}"
+}
+
+test {
+    useJUnitPlatform()
+    systemProperty "karate.options", System.properties.getProperty("karate.options")
+    systemProperty "karate.env", System.properties.getProperty("karate.env")
+    systemProperty "baseUrl", System.properties.getProperty("baseUrl")
+    systemProperty "customerId", System.properties.getProperty("customerId")
+
+    outputs.upToDateWhen { false }
+}

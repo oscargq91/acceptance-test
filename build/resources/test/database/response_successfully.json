@@ -1,0 +1,59 @@
+{
+  "preapprovalCreditStudy": {
+    "activeValidations": {
+      "accountOpeningDate": "#boolean",
+      "deviceProvisioningDate": "#boolean",
+      "customerCRMKey": "#boolean"
+    },
+    "application": {
+      "isPreApproved": "#boolean",
+      "consumerCredit": {
+        "informationDetail": {
+          "unsecuredPersonalLoanAmount": "#number",
+          "finalScore": "#string",
+          "adjustedExpenses": "#number",
+          "calculatedExpenses": "#number",
+          "riskGroup": "#string",
+          "riskLevel": "#string",
+          "score": "#number",
+          "internalReportingDescription": "#string",
+          "externalReportingDescription": "#string",
+          "decisionEngineDescription": "#string"
+        },
+        "internalReportingRecord": [
+          {
+            "causal": "#string",
+            "idCausal": "#number"
+          }
+        ],
+        "externalReportingRecord": [
+          {
+            "causal": "#string",
+            "idCausal": "#number"
+          }
+        ],
+        "decisionEngineRecord": [
+          {
+            "causal": "#string",
+            "idCausal": "#number"
+          }
+        ],
+        "rate": {
+          "rateCredit": "#number",
+          "rateInvestment": "#number",
+          "rateCreditCard": "#number",
+          "ratePayrollLoan": "#number"
+        },
+        "term": {
+          "termPersonalLoan": "#number",
+          "maxTerm": "#number",
+          "minTerm": "#number"
+        },
+        "quota": {
+          "directApproval": "#number"
+        }
+      },
+      "idCreditLimit": "#string"
+    }
+  }
+}

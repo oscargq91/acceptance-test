@@ -1,0 +1,67 @@
+{
+  "globals": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-type": "#(documentType)",
+    "document-number": "#(customer)"
+  },
+  "notDocumentType": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-number": "#(documentNumber)"
+  },
+  "notDocumentNumber": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-type": "#(documentType)"
+  },
+  "notDeviceId": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "document-number": "#(documentNumber)",
+    "document-type": "#(documentType)"
+  },
+  "notAccountNumber": {
+    "account-type": "#(accountType)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-number": "#(documentNumber)",
+    "document-type": "#(documentType)"
+  },
+  "notAccountType": {
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-number": "#(documentNumber)",
+    "document-type": "#(documentType)"
+  },
+  "notChannel": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "message-id": "c4e6bd04-5149-11e7-b114-b2f933d5fe50",
+    "device-id": "#(deviceId)",
+    "document-number": "#(documentNumber)",
+    "document-type": "#(documentType)"
+  },
+  "notMessageID": {
+    "account-type": "#(accountType)",
+    "account-number": "#(accountNumber)",
+    "channel": "BLM",
+    "device-id": "#(deviceId)",
+    "document-number": "#(documentNumber)",
+    "document-type": "#(documentType)"
+  }
+}
