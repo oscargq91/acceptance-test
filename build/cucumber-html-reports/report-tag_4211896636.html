@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>03 abr 2024, 22:05</td>
+      <td>04 abr 2024, 01:28</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@DeleteUserSuccessfully</td>
-          <td      class="passed"    >3</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >5</td>
+          <td      class="passed"    >9</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">9</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="3660600">0.003</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="17808500">0.017</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.017</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Successfully delete user</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -301,11 +301,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When failed">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.009</span>
 
 </div>
 
@@ -314,42 +314,31 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>http</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>http call failed after 3 milliseconds for url: http://localhost:8080/api/v1/users
-classpath:karate/user.feature:152</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>22:05:18.015 request:
-1 &gt; POST http://localhost:8080/api/v1/users
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>01:28:29.080 request:
+1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 88
-1 &gt; Host: localhost:8080
+1 &gt; Host: localhost:8090
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;username&quot;:&quot;#(username)&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
 
-22:05:18.017 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information, http call failed after 3 milliseconds for url: http://localhost:8080/api/v1/users
-22:05:18.017 classpath:karate/user.feature:152
-When method Post
-http call failed after 3 milliseconds for url: http://localhost:8080/api/v1/users
-classpath:karate/user.feature:152
+01:28:29.087 response time in milliseconds: 7
+1 &lt; 201
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 120
+{&quot;user&quot;:{&quot;id&quot;:&quot;660e488dfd593e5b4592dec0&quot;,&quot;username&quot;:&quot;#(username)&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
+
 </pre>
       </div>
     </div>
@@ -365,7 +354,7 @@ classpath:karate/user.feature:152
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">def id = response.user.id</span>
 
@@ -392,7 +381,7 @@ classpath:karate/user.feature:152
       <div class="step">
 
 
-<div class="brief step-name-* skipped">
+<div class="brief step-name-* passed">
   <span class="keyword indention">*</span>
   <span class="name">karate.set('id', id)</span>
 
@@ -419,7 +408,7 @@ classpath:karate/user.feature:152
       <div class="step">
 
 
-<div class="brief step-name-Given skipped">
+<div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
   <span class="name">path usersPath + '/' + id</span>
 
@@ -446,11 +435,11 @@ classpath:karate/user.feature:152
       <div class="step">
 
 
-<div class="brief step-name-When skipped">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method Delete</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -462,6 +451,28 @@ classpath:karate/user.feature:152
 
 
 
+  <div class="inner-level">
+    <div class="docstring indention">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>01:28:29.090 request:
+2 &gt; DELETE http://localhost:8090/api/v1/users/660e488dfd593e5b4592dec0
+2 &gt; Host: localhost:8090
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+01:28:29.096 response time in milliseconds: 5
+2 &lt; 204
+
+
+</pre>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -473,7 +484,7 @@ classpath:karate/user.feature:152
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 204</span>
 
