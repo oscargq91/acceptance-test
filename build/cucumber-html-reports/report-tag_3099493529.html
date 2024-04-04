@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>02 abr 2024, 16:35</td>
+      <td>03 abr 2024, 22:05</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@GetUserByIdSuccessfully</td>
-          <td      class="passed"    >4</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >1</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">4</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="9716900">0.009</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="24208500">0.024</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.024</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Successfully get user by ID</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">path usersPath + '/660b711e8306ec2895e3b3c4'</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.005</span>
 
 </div>
 
@@ -247,11 +247,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">method Get</span>
 
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.018</span>
 
 </div>
 
@@ -260,16 +260,28 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>http</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>http call failed after 18 milliseconds for url: http://localhost:8080/api/v1/users/660b711e8306ec2895e3b3c4
+classpath:karate/user.feature:163</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
           <a>Doc string</a>
       </div>
-      <div id="msg-3" class="collapse collapsable-details">
-        <pre>16:35:46.878 request:
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>22:05:18.032 request:
 1 &gt; GET http://localhost:8080/api/v1/users/660b711e8306ec2895e3b3c4
 1 &gt; Host: localhost:8080
 1 &gt; Connection: Keep-Alive
@@ -277,12 +289,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-16:35:46.884 response time in milliseconds: 6
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 115
-{&quot;user&quot;:{&quot;id&quot;:&quot;660b711e8306ec2895e3b3c4&quot;,&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba1@prueba.com&quot;}}
-
+22:05:18.050 org.apache.http.conn.HttpHostConnectException: Connect to localhost:8080 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: no further information, http call failed after 18 milliseconds for url: http://localhost:8080/api/v1/users/660b711e8306ec2895e3b3c4
+22:05:18.050 classpath:karate/user.feature:163
+When method Get
+http call failed after 18 milliseconds for url: http://localhost:8080/api/v1/users/660b711e8306ec2895e3b3c4
+classpath:karate/user.feature:163
 </pre>
       </div>
     </div>
@@ -298,7 +309,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
@@ -325,7 +336,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">match response contains responseSuccessfully.userNew</span>
 
