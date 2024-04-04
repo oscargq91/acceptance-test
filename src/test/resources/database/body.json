@@ -21,8 +21,8 @@
   "userNew": {
     "user": {
       "username": "#(username)",
-      "password": "123456789",
-      "email": "prueba10@prueba.com"
+      "password": "#(password)",
+      "email": "#(email)"
     }
   },
   "userNewNotUsername": {

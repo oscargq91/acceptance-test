@@ -1,7 +1,9 @@
 package utils;
 
+import java.util.List;
+
 public class KarateHelper {
-    public static String generateRandomName() {
-        return DataGenerator.generateRandomName();
+    public static List<String> generateRandomUser() {
+        return DataGenerator.generateRandomUser();
     }
 }

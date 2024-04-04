@@ -9,14 +9,7 @@ Feature: Validate Business Customer Rules in BLM
     * def responseError = read("../database/response_error.json")
     * def requestBody = read("../database/body.json")
     * def KarateHelper = Java.type('utils.KarateHelper')
-
-  @GetUserListSuccessfully
-  Scenario: Successfully get user list
-    Given path usersPath
-    When method Get
-    Then status 200
-    And match response contains responseSuccessfully.list
-
+    
   @LoginSuccessfully
   Scenario: Successfully login
     Given path loginPath
@@ -33,7 +26,7 @@ Feature: Validate Business Customer Rules in BLM
     Then status 404
     And match response contains responseError
     Examples:
-      | domain                                    | message                              |
+      | domain                                 | message                             |
       | POST:/users/login                      | Not found user                      |
 
   @LoginFailedpasswordInvalid
@@ -52,7 +45,7 @@ Feature: Validate Business Customer Rules in BLM
     Given path usersPath
     When method Get
     Then status 200
-    And match response contains responseSuccessfully.list
+    And match each response.users == { id: '#string', username: '#string', password: '#string', email: '#string' }
 
   @LoginAndUpdatePasswordSuccessfully
   Scenario: Successfully login and update password
@@ -101,16 +94,15 @@ Feature: Validate Business Customer Rules in BLM
   @AddUserSuccessfully
   Scenario: Successfully add user
     Given path usersPath
-    * def username = KarateHelper.generateRandomName()
-    * print 'Nombre generado:', username
-    And request requestBody.userNew
+    * def userData = KarateHelper.generateRandomUser()
+    * def username = userData[0]
+    * def email = userData[1]
+    * def password = userData[2]
+    And request { user: { username: '#(username)', email: '#(email)', password: '#(password)' } }
     When method Post
     Then status 201
-    * def id = response.user.id
-    * karate.set('id', id)
     And match response contains responseSuccessfully.userNew
-    Given path usersPath + '/' + id
-    When method Delete
+
 
   @AddUserNotusernameFailed
   Scenario Outline: Failed add user not username
@@ -120,8 +112,9 @@ Feature: Validate Business Customer Rules in BLM
     Then status 400
     And match response contains responseError
     Examples:
-      | domain                                    | message                              |
-      | POST:/users                    | The username field is required                    |
+      | domain                         | message                              |
+      | POST:/users                    | The username field is required       |
+
   @AddUserNotEmailFailed
   Scenario Outline: Failed add user not email
     Given path usersPath
@@ -130,8 +123,8 @@ Feature: Validate Business Customer Rules in BLM
     Then status 400
     And match response contains responseError
     Examples:
-      | domain                                    | message                              |
-      | POST:/users                    | The email field is required                  |
+      | domain                         | message                              |
+      | POST:/users                    | The email field is required          |
 
   @AddUserNotPasswordFailed
   Scenario Outline: Failed add user not password
@@ -141,13 +134,16 @@ Feature: Validate Business Customer Rules in BLM
     Then status 400
     And match response contains responseError
     Examples:
-      | domain                                    | message                              |
-      | POST:/users                    | The password field is require                 |
+      | domain                         | message                              |
+      | POST:/users                    | The password field is require        |
 
   @DeleteUserSuccessfully
-  Scenario: Successfully delete user
+  Scenario Outline: Successfully delete user
     Given path usersPath
-    * def username = KarateHelper.generateRandomName()
+    * def userData = KarateHelper.generateRandomUser()
+    * def username = userData[0]
+    * def email = userData[1]
+    * def password = userData[2]
     And request requestBody.userNew
     When method Post
     * def id = response.user.id
@@ -155,6 +151,9 @@ Feature: Validate Business Customer Rules in BLM
     Given path usersPath + '/' + id
     When method Delete
     Then status 204
+    Examples:
+      | username        | email                    |password        |
+      | userdelete      |   userdelete@gmail.com   | 123456         |
 
 
   @GetUserByIdSuccessfully
@@ -172,7 +171,7 @@ Feature: Validate Business Customer Rules in BLM
     And match response contains responseError
     Examples:
       | domain                                    | message                              |
-      | GET:/users/1234567                      | Not found user                     |
+      | GET:/users/1234567                        | Not found user                       |
 
   @UpdateUserSuccessfully
   Scenario: Successfully update user
@@ -190,7 +189,7 @@ Feature: Validate Business Customer Rules in BLM
     Then status 404
     And match response contains responseError
     Examples:
-      | domain                                    | message                              |
-      | PUT:/users                       | Not found user                     |
+      | domain      | message                            |
+      | PUT:/users  | Not found user                     |
 
 
