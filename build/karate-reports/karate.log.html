@@ -39,8 +39,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
       <img src="karate-labs-logo-ring.svg" alt="Karate Labs"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">4</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">4</div>
     </div>
   </div>
   <div id="nav-env">
@@ -50,21 +50,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2024-04-25 02:11:40 p. m.</div>
+    <div>2024-04-25 02:24:46 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1:14]"><span>[1:14]</span> <span>Successfully add log</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[2.1:30]"><span>[2.1:30]</span> <span>Failed add log</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[3:33]"><span>[3:33]</span> <span>Successfully get user list</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[4:41]"><span>[4:41]</span> <span>Successfully get user list</span></a>
           </div>
         </div>
@@ -90,8 +90,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>196</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2877</span>
             </div>
           </div>
           <div class="step-row">
@@ -198,7 +198,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def responseSuccessfully = read(&quot;../database/response_successfully.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">37</div>
+    <div class="time-cell passed">38</div>
   </div>
 
    
@@ -254,7 +254,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def requestBody = read(&quot;../database/body.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -332,13 +332,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref failed">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">133</div>
+    <div class="time-cell failed">2819</div>
   </div>
 
    
@@ -347,22 +347,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.17">14:11:40.477 request:
-1 &gt; POST http://localhost:8070/api/v1/log
+  <div class="preformatted" data-parent="0.17">14:24:43.728 request:
+1 &gt; POST http://api-rest:8070/api/v1/log
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 192
-1 &gt; Host: localhost:8070
+1 &gt; Host: api-rest:8070
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}
 
-14:11:40.507 response time in milliseconds: 28
-1 &lt; 201
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 267
-{&quot;id&quot;:&quot;662aaaec9143e034b35179f1&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:11:40.49725871&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}
-
+14:24:46.432 java.net.UnknownHostException: Host desconocido (api-rest), http call failed after 2773 milliseconds for url: http://api-rest:8070/api/v1/log
+14:24:46.432 classpath:karate/log.feature:17
+When method Post
+http call failed after 2773 milliseconds for url: http://api-rest:8070/api/v1/log
+classpath:karate/log.feature:17
 </div>   
 
   
@@ -376,13 +375,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -404,13 +403,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
+      <div class="step-ref skipped">19</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response contains responseSuccessfully.log</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -438,8 +437,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>16</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>10</span>
             </div>
           </div>
           <div class="step-row">
@@ -574,7 +573,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def responseError = read(&quot;../database/response_error.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -680,13 +679,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="1.25">
-      <div class="step-ref passed">25</div>
+      <div class="step-ref failed">25</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>When</span>&nbsp;<span>method Post</span>
       </div>
     </div>
-    <div class="time-cell passed">9</div>
+    <div class="time-cell failed">2</div>
   </div>
 
    
@@ -695,22 +694,21 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="1.25">14:11:40.534 request:
-1 &gt; POST http://localhost:8070/api/v1/log
+  <div class="preformatted" data-parent="1.25">14:24:46.453 request:
+1 &gt; POST http://api-rest:8070/api/v1/log
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 160
-1 &gt; Host: localhost:8070
+1 &gt; Host: api-rest:8070
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}
 
-14:11:40.541 response time in milliseconds: 6
-1 &lt; 404
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 96
-{&quot;errors&quot;:[{&quot;httpStatus&quot;:404,&quot;domain&quot;:&quot;POST:/log&quot;,&quot;message&quot;:&quot;A required attribute is missing&quot;}]}
-
+14:24:46.454 java.net.UnknownHostException: api-rest, http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/log
+14:24:46.454 classpath:karate/log.feature:25
+When method Post
+http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/log
+classpath:karate/log.feature:25
 </div>   
 
   
@@ -724,13 +722,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="1.26">
-      <div class="step-ref passed">26</div>
+      <div class="step-ref skipped">26</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 404</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -752,13 +750,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="1.27">
-      <div class="step-ref passed">27</div>
+      <div class="step-ref skipped">27</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match response contains responseError</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -786,8 +784,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>54</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>8</span>
             </div>
           </div>
           <div class="step-row">
@@ -922,7 +920,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def responseError = read(&quot;../database/response_error.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">3</div>
   </div>
 
    
@@ -1000,13 +998,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.35">
-      <div class="step-ref passed">35</div>
+      <div class="step-ref failed">35</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>When</span>&nbsp;<span>method Get</span>
       </div>
     </div>
-    <div class="time-cell passed">23</div>
+    <div class="time-cell failed">2</div>
   </div>
 
    
@@ -1015,20 +1013,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.35">14:11:40.556 request:
-1 &gt; GET http://localhost:8070/api/v1/logs
-1 &gt; Host: localhost:8070
+  <div class="preformatted" data-parent="0.35">14:24:46.470 request:
+1 &gt; GET http://api-rest:8070/api/v1/logs
+1 &gt; Host: api-rest:8070
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:40.574 response time in milliseconds: 16
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 34464
-[{&quot;id&quot;:&quot;662a9fc49143e034b3517971&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:24:04&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662a9fc49143e034b3517973&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:24:04&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a9fc49143e034b3517972&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:24:04&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a9fc49143e034b3517974&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:24:04&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa0799143e034b3517975&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:05&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa0799143e034b3517976&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:05&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa0799143e034b3517977&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:05&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa0799143e034b3517978&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:05&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa0929143e034b351797a&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:30&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa0929143e034b351797b&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:30&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa0929143e034b351797c&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:30&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa0929143e034b351797d&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:27:30&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa15b9143e034b351797f&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:30:51&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa15b9143e034b3517980&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:30:51&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa15b9143e034b3517981&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:30:51&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa15c9143e034b3517982&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:30:52&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517984&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:33:55&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517985&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:33:55&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517986&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:33:55&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517987&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:33:55&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa2519143e034b3517989&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:34:57&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa2519143e034b351798a&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:34:57&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa2519143e034b351798b&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:34:57&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa2519143e034b351798c&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:34:57&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa3139143e034b351798e&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:38:11&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa3139143e034b351798f&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:38:11&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa3139143e034b3517990&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:38:11&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa3139143e034b3517991&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:38:11&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa3c69143e034b3517993&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:41:10&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa3c69143e034b3517994&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:41:10&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa3c69143e034b3517995&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:41:10&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa3c69143e034b3517996&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:41:10&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa61d9143e034b3517998&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:51:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa61d9143e034b3517999&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:51:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa61d9143e034b351799a&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:51:09&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa61d9143e034b351799b&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:51:09&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa61d9143e034b351799c&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:51:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6839143e034b351799e&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:52:51&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6839143e034b351799f&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:52:51&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6839143e034b35179a0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:52:51&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa6849143e034b35179a1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:52:52&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa6849143e034b35179a2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:52:52&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6dd9143e034b35179a4&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:54:21&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6dd9143e034b35179a5&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:54:21&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa6dd9143e034b35179a6&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:54:21&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa6dd9143e034b35179a7&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:54:21&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa6dd9143e034b35179a8&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:54:21&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa71a9143e034b35179aa&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:55:22&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa71a9143e034b35179ab&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:55:22&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa71b9143e034b35179ac&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:55:22&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa71b9143e034b35179ad&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:55:23&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa71b9143e034b35179ae&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:55:23&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa79c9143e034b35179b0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:57:32&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa79c9143e034b35179b1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:57:32&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa79c9143e034b35179b2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:57:32&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa79c9143e034b35179b3&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:57:32&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa79c9143e034b35179b4&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:57:32&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa7e49143e034b35179b6&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:58:44&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa7e49143e034b35179b7&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:58:44&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa7e49143e034b35179b8&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:58:44&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa7e49143e034b35179b9&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:58:44&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa7e49143e034b35179ba&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T06:58:44&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8319143e034b35179bc&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:00:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8319143e034b35179bd&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:00:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8329143e034b35179be&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:00:02&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa8329143e034b35179bf&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:00:02&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa8329143e034b35179c0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:00:02&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8a99143e034b35179c2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8a99143e034b35179c3&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8a99143e034b35179c4&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:01&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa8a99143e034b35179c5&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:01&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa8a99143e034b35179c6&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8b79143e034b35179c8&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:15&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8b79143e034b35179c9&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:15&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8b79143e034b35179ca&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:15&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa8b79143e034b35179cb&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:15&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa8b79143e034b35179cc&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:02:15&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8ed9143e034b35179ce&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:03:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8ed9143e034b35179cf&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:03:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa8ed9143e034b35179d0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:03:09&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa8ed9143e034b35179d1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:03:09&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa8ed9143e034b35179d2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:03:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa9289143e034b35179d4&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:04:08&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa9289143e034b35179d5&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:04:08&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa9289143e034b35179d6&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:04:08&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aa9299143e034b35179d7&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:04:09&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aa9299143e034b35179d8&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:04:09&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa729143e034b35179da&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:09:38&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa729143e034b35179db&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:09:38&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa729143e034b35179dc&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:09:38&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aaa729143e034b35179dd&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:09:38&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aaa729143e034b35179de&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:09:38&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa999143e034b35179e0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:17&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa999143e034b35179e1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:17&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaa999143e034b35179e2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:17&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aaa999143e034b35179e3&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:17&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aaa999143e034b35179e4&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:17&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaab09143e034b35179e6&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:40&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaab09143e034b35179e7&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:40&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaab09143e034b35179e8&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:40&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aaab09143e034b35179e9&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:40&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aaab09143e034b35179ea&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:10:40&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaac59143e034b35179ec&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:11:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaac59143e034b35179ed&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:11:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aaac59143e034b35179ee&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:11:01&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662aaac59143e034b35179ef&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:11:01&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Unauthorized: Incorrect password&quot;},{&quot;id&quot;:&quot;662aaac59143e034b35179f0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T07:11:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a2c62a05db44d09a5e51c&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:11:46.948&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a2e711cc3eb4df53a0e63&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:20:33.226&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a319a8a7d827af63b4326&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion2&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:34:02.645&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a319b8a7d827af63b4327&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion2&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:34:03.627&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a319d8a7d827af63b4328&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion2&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:34:05.79&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a31a28a7d827af63b4329&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion3&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T10:34:10.07&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a3c119143e034b351796f&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T11:18:41&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3cc29143e034b3517970&quot;,&quot;application&quot;:&quot;nombre_de_la_aplicacion3&quot;,&quot;type&quot;:&quot;tipo_de_log&quot;,&quot;module&quot;:&quot;clase_o_modulo_que_lo_genera&quot;,&quot;timestamp&quot;:&quot;2024-04-25T11:21:38.428&quot;,&quot;summary&quot;:&quot;resumen_del_log&quot;,&quot;description&quot;:&quot;descripcion_del_log&quot;},{&quot;id&quot;:&quot;662a393ca5945c055c2058ae&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:05:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3943a5945c055c2058af&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:06:43&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3958a5945c055c2058b0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:04&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a396ca5945c055c2058b1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:24&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a3970a5945c055c2058b2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:28&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3a528ae1ad7633a2b440&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:11:14&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662aa0919143e034b3517979&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:27:29.908&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa15b9143e034b351797e&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:30:51.15&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517983&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:33:55.021&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa2509143e034b3517988&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:34:56.619&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa3129143e034b351798d&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:38:10.388&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa3c59143e034b3517992&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:41:09.512&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa61c9143e034b3517997&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:51:08.887&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa6839143e034b351799d&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:52:51.174&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa6dc9143e034b35179a3&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:54:20.816&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa71a9143e034b35179a9&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:55:22.196&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa79b9143e034b35179af&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:57:31.916&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa7e39143e034b35179b5&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:58:43.873&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8319143e034b35179bb&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:00:01.175&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8a89143e034b35179c1&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:02:00.793&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8b69143e034b35179c7&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:02:14.437&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8ec9143e034b35179cd&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:03:08.331&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa9289143e034b35179d3&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:04:08.19&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaa719143e034b35179d9&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:09:37.352&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaa989143e034b35179df&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:10:16.235&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaaaf9143e034b35179e5&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:10:39.741&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaac49143e034b35179eb&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:11:00.41&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaaec9143e034b35179f1&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:11:40.497&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}]
-
+14:24:46.470 java.net.UnknownHostException: api-rest, http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/logs
+14:24:46.470 classpath:karate/log.feature:35
+When method Get
+http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/logs
+classpath:karate/log.feature:35
 </div>   
 
   
@@ -1042,13 +1039,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.36">
-      <div class="step-ref passed">36</div>
+      <div class="step-ref skipped">36</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1070,13 +1067,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.37">
-      <div class="step-ref passed">37</div>
+      <div class="step-ref skipped">37</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match each response == { id: &#39;#string&#39;, application : &#39;#string&#39;, type: &#39;#string&#39;, timestamp: &#39;#string&#39;,module: &#39;#string&#39;,summary:&#39;#string&#39;, description: &#39;#string&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">27</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1104,8 +1101,8 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>26</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>14</span>
             </div>
           </div>
           <div class="step-row">
@@ -1212,7 +1209,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def responseSuccessfully = read(&quot;../database/response_successfully.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1268,7 +1265,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>def requestBody = read(&quot;../database/body.json&quot;)</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">2</div>
   </div>
 
    
@@ -1296,7 +1293,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>Given</span>&nbsp;<span>path listLogPath+ &#39;/acceptance-test&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -1318,13 +1315,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.43">
-      <div class="step-ref passed">43</div>
+      <div class="step-ref failed">43</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>When</span>&nbsp;<span>method Get</span>
       </div>
     </div>
-    <div class="time-cell passed">13</div>
+    <div class="time-cell failed">1</div>
   </div>
 
    
@@ -1333,20 +1330,19 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.43">14:11:40.620 request:
-1 &gt; GET http://localhost:8070/api/v1/logs/acceptance-test
-1 &gt; Host: localhost:8070
+  <div class="preformatted" data-parent="0.43">14:24:46.491 request:
+1 &gt; GET http://api-rest:8070/api/v1/logs/acceptance-test
+1 &gt; Host: api-rest:8070
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:40.633 response time in milliseconds: 11
-1 &lt; 200
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 5784
-[{&quot;id&quot;:&quot;662aa0919143e034b3517979&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:27:29.908&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa15b9143e034b351797e&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:30:51.15&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa2139143e034b3517983&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:33:55.021&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa2509143e034b3517988&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:34:56.619&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa3129143e034b351798d&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:38:10.388&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa3c59143e034b3517992&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:41:09.512&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa61c9143e034b3517997&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:51:08.887&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa6839143e034b351799d&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:52:51.174&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa6dc9143e034b35179a3&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:54:20.816&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa71a9143e034b35179a9&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:55:22.196&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa79b9143e034b35179af&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:57:31.916&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa7e39143e034b35179b5&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T18:58:43.873&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8319143e034b35179bb&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:00:01.175&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8a89143e034b35179c1&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:02:00.793&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8b69143e034b35179c7&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:02:14.437&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa8ec9143e034b35179cd&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:03:08.331&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aa9289143e034b35179d3&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:04:08.19&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaa719143e034b35179d9&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:09:37.352&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaa989143e034b35179df&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:10:16.235&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaaaf9143e034b35179e5&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:10:39.741&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaac49143e034b35179eb&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:11:00.41&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;},{&quot;id&quot;:&quot;662aaaec9143e034b35179f1&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-04-25T19:11:40.497&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}]
-
+14:24:46.491 java.net.UnknownHostException: api-rest, http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/logs/acceptance-test
+14:24:46.491 classpath:karate/log.feature:43
+When method Get
+http call failed after 1 milliseconds for url: http://api-rest:8070/api/v1/logs/acceptance-test
+classpath:karate/log.feature:43
 </div>   
 
   
@@ -1360,13 +1356,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.44">
-      <div class="step-ref passed">44</div>
+      <div class="step-ref skipped">44</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1388,13 +1384,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   <div class="step-row">
     <div class="step-container" id="0.45">
-      <div class="step-ref passed">45</div>
+      <div class="step-ref skipped">45</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>And</span>&nbsp;<span>match each response == { id: &#39;#string&#39;, application : &#39;#string&#39;, type: &#39;#string&#39;, timestamp: &#39;#string&#39;,module: &#39;#string&#39;,summary:&#39;#string&#39;, description: &#39;#string&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    

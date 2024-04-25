@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>25 abr 2024, 14:11</td>
+      <td>25 abr 2024, 14:24</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">karate/user.feature</td>
-          <td      class="passed"    >248</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >245</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">248</td>
 
-          <td  class="passed"    >17</td>
-          <td >0</td>
+          <td  class="passed"    >16</td>
+          <td  class="failed"    >1</td>
           <td class="total">17</td>
 
-          <td class="duration" data-value="443827889">0.443</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="3098713203">3.098</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -171,7 +171,7 @@ $(document).ready(function() {
 </div>
 
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">karate/user.feature</span>
 
@@ -367,7 +367,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseError = read(&quot;../database/response_error.json&quot;)</span>
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -461,7 +461,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.013</span>
+  <span class="lead-duration duration">0.032</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-3">
@@ -558,7 +558,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.024</span>
 
 </div>
 
@@ -576,7 +576,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-5" class="collapse collapsable-details">
-        <pre>14:11:41.252 request:
+        <pre>14:24:47.181 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 55
@@ -586,11 +586,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.263 response time in milliseconds: 10
+14:24:47.203 response time in milliseconds: 20
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 191
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA0fQ.xAKpbSj3aqndCvElQsUsWG9JoynpjzGQBLZk6BIvDqU&quot;}
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MzA4NywiZXhwIjoxNzE0MDczMDkwfQ.KZVlR1RZZWcySNDPIil0O5UX3FCDGsrSeA-VPINtqAo&quot;}
 
 </pre>
       </div>
@@ -638,7 +638,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match response contains responseSuccessfully.loginResponse</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -676,7 +676,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.004</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-6">
@@ -948,12 +948,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.056</span>
+  <span class="lead-duration duration">2.719</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-8">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Successfully login add Log</span>
 
@@ -964,16 +964,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-8" class="collapse collapsable-details ">
+  <div id="element-8" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-9">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -983,7 +983,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-9" class="inner-level collapse collapsable-details ">
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -1045,7 +1045,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.012</span>
 
 </div>
 
@@ -1063,7 +1063,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-10" class="collapse collapsable-details">
-        <pre>14:11:41.275 request:
+        <pre>14:24:47.223 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 55
@@ -1073,11 +1073,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.285 response time in milliseconds: 10
+14:24:47.234 response time in milliseconds: 10
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 191
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA0fQ.xAKpbSj3aqndCvElQsUsWG9JoynpjzGQBLZk6BIvDqU&quot;}
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MzA4NywiZXhwIjoxNzE0MDczMDkwfQ.KZVlR1RZZWcySNDPIil0O5UX3FCDGsrSeA-VPINtqAo&quot;}
 
 </pre>
       </div>
@@ -1150,7 +1150,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">url  'http://localhost:8070/api/v1'</span>
+  <span class="name">url  'http://logs-rest:8070/api/v1'</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -1206,7 +1206,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def date = KarateHelper.generateDate()</span>
 
-  <span class="lead-duration duration">0.031</span>
+  <span class="lead-duration duration">0.027</span>
 
 </div>
 
@@ -1256,11 +1256,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">method Get</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">2.678</span>
 
 </div>
 
@@ -1269,30 +1269,41 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-11">
+          <a>http</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details  in ">
+        <pre>http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+classpath:karate/user.feature:32</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-12">
           <a>Doc string</a>
       </div>
-      <div id="msg-11" class="collapse collapsable-details">
-        <pre>14:11:41.321 request:
-2 &gt; GET http://localhost:8070/api/v1/logs/userManagementApiRest
-2 &gt; min-date: 2024-04-25T13:11:41.3190530
-2 &gt; Host: localhost:8070
+      <div id="msg-12" class="collapse collapsable-details">
+        <pre>14:24:47.265 request:
+2 &gt; GET http://logs-rest:8070/api/v1/logs/userManagementApiRest
+2 &gt; min-date: 2024-04-25T07:24:47.2633759
+2 &gt; Host: logs-rest:8070
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.330 response time in milliseconds: 9
-2 &lt; 200
-2 &lt; Content-Type: application/json
-2 &lt; Content-Length: 1427
-[{&quot;id&quot;:&quot;662a393ca5945c055c2058ae&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:05:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3943a5945c055c2058af&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:06:43&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3958a5945c055c2058b0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:04&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a396ca5945c055c2058b1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:24&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a3970a5945c055c2058b2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:28&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3a528ae1ad7633a2b440&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:11:14&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;}]
-
+14:24:49.942 java.net.UnknownHostException: Host desconocido (logs-rest), http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+14:24:49.943 classpath:karate/user.feature:32
+When method Get
+http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+classpath:karate/user.feature:32
 </pre>
       </div>
     </div>
@@ -1308,7 +1319,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
@@ -1335,11 +1346,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">match each response == { id: '#string', application : '#string', type: '#string', timestamp: '#string',module: '#string',summary:'#string', description: '#string' }</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -1377,10 +1388,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-12">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-13">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -1393,14 +1404,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-12" class="collapse collapsable-details ">
+  <div id="element-13" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-13">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-14">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1412,7 +1423,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-13" class="inner-level collapse collapsable-details ">
+  <div id="steps-14" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1652,7 +1663,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.011</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-14">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-15">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -1665,14 +1676,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-14" class="collapse collapsable-details ">
+  <div id="element-15" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-15">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-16">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1684,7 +1695,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-15" class="inner-level collapse collapsable-details ">
+  <div id="steps-16" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -1760,11 +1771,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-16">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-17">
           <a>Doc string</a>
       </div>
-      <div id="msg-16" class="collapse collapsable-details">
-        <pre>14:11:41.342 request:
+      <div id="msg-17" class="collapse collapsable-details">
+        <pre>14:24:49.953 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 58
@@ -1774,7 +1785,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1222&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.351 response time in milliseconds: 8
+14:24:49.962 response time in milliseconds: 8
 1 &lt; 404
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 87
@@ -1864,10 +1875,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-17">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-18">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -1880,14 +1891,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-17" class="collapse collapsable-details ">
+  <div id="element-18" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-18">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-19">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -1899,7 +1910,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-18" class="inner-level collapse collapsable-details ">
+  <div id="steps-19" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2139,7 +2150,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.012</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-19">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-20">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -2152,14 +2163,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-19" class="collapse collapsable-details ">
+  <div id="element-20" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-20">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-21">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2171,7 +2182,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-20" class="inner-level collapse collapsable-details ">
+  <div id="steps-21" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2247,11 +2258,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-21">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-22">
           <a>Doc string</a>
       </div>
-      <div id="msg-21" class="collapse collapsable-details">
-        <pre>14:11:41.361 request:
+      <div id="msg-22" class="collapse collapsable-details">
+        <pre>14:24:49.974 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 59
@@ -2261,7 +2272,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;1234567891111&quot;}}
 
-14:11:41.371 response time in milliseconds: 9
+14:24:49.983 response time in milliseconds: 8
 1 &lt; 401
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 105
@@ -2351,10 +2362,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-22">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-23">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -2367,14 +2378,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-22" class="collapse collapsable-details ">
+  <div id="element-23" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-23">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-24">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2386,7 +2397,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-23" class="inner-level collapse collapsable-details ">
+  <div id="steps-24" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2529,7 +2540,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseError = read(&quot;../database/response_error.json&quot;)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -2623,10 +2634,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.017</span>
+  <span class="lead-duration duration">0.021</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-24">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-25">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -2639,14 +2650,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-24" class="collapse collapsable-details ">
+  <div id="element-25" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-25">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-26">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2658,7 +2669,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-25" class="inner-level collapse collapsable-details ">
+  <div id="steps-26" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2707,11 +2718,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-26">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-27">
           <a>Doc string</a>
       </div>
-      <div id="msg-26" class="collapse collapsable-details">
-        <pre>14:11:41.381 request:
+      <div id="msg-27" class="collapse collapsable-details">
+        <pre>14:24:49.994 request:
 1 &gt; GET http://localhost:8090/api/v1/users
 1 &gt; Host: localhost:8090
 1 &gt; Connection: Keep-Alive
@@ -2719,11 +2730,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.392 response time in milliseconds: 10
+14:24:50.005 response time in milliseconds: 10
 1 &lt; 200
 1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 4504
-{&quot;users&quot;:[{&quot;id&quot;:&quot;65f3947bb3c3d10286754f5a&quot;,&quot;username&quot;:&quot;prueba7&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba7@prueba.com&quot;},{&quot;id&quot;:&quot;660b711e8306ec2895e3b3c4&quot;,&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba1@prueba.com&quot;},{&quot;id&quot;:&quot;660b71278306ec2895e3b3c5&quot;,&quot;username&quot;:&quot;prueba2&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba2@prueba.com&quot;},{&quot;id&quot;:&quot;660b712e8306ec2895e3b3c6&quot;,&quot;username&quot;:&quot;prueba3&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba3@prueba.com&quot;},{&quot;id&quot;:&quot;660b71348306ec2895e3b3c7&quot;,&quot;username&quot;:&quot;prueba4&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba4@prueba.com&quot;},{&quot;id&quot;:&quot;660b713d8306ec2895e3b3c8&quot;,&quot;username&quot;:&quot;prueba5&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba5@prueba.com&quot;},{&quot;id&quot;:&quot;660ee1696657865341baf8f5&quot;,&quot;username&quot;:&quot;saul.keeblery3&quot;,&quot;password&quot;:&quot;hvsdxbcjlx&quot;,&quot;email&quot;:&quot;saul.keebler@gmail.com&quot;},{&quot;id&quot;:&quot;660ee5886657865341baf8f8&quot;,&quot;username&quot;:&quot;jeffie.powlowskizw&quot;,&quot;password&quot;:&quot;4k0evv1xe1&quot;,&quot;email&quot;:&quot;jeffie.powlowski@gmail.com&quot;},{&quot;id&quot;:&quot;660ee5f06657865341baf8fa&quot;,&quot;username&quot;:&quot;hyo.bartolettipl&quot;,&quot;password&quot;:&quot;9edaqyzxxo&quot;,&quot;email&quot;:&quot;hyo.bartoletti@gmail.com&quot;},{&quot;id&quot;:&quot;660ee6406657865341baf8fc&quot;,&quot;username&quot;:&quot;dario.morarfl&quot;,&quot;password&quot;:&quot;g11j7mewg5&quot;,&quot;email&quot;:&quot;dario.morar@gmail.com&quot;},{&quot;id&quot;:&quot;660ee6ee6657865341baf8ff&quot;,&quot;username&quot;:&quot;thaddeus.gleasonnd&quot;,&quot;password&quot;:&quot;8oduhinkdr&quot;,&quot;email&quot;:&quot;thaddeus.gleason@gmail.com&quot;},{&quot;id&quot;:&quot;660f625eb26ae66d0e73d5dc&quot;,&quot;username&quot;:&quot;fidela.hessel5q&quot;,&quot;password&quot;:&quot;g383t70bmk&quot;,&quot;email&quot;:&quot;fidela.hessel@gmail.com&quot;},{&quot;id&quot;:&quot;660f62c0b26ae66d0e73d5de&quot;,&quot;username&quot;:&quot;deetta.weissnattb&quot;,&quot;password&quot;:&quot;5lo6thk5fj&quot;,&quot;email&quot;:&quot;deetta.weissnat@gmail.com&quot;},{&quot;id&quot;:&quot;6627382511d9a22bfb9f1a06&quot;,&quot;username&quot;:&quot;mose.johnszz&quot;,&quot;password&quot;:&quot;hwvxlm6s79&quot;,&quot;email&quot;:&quot;mose.johns@gmail.com&quot;},{&quot;id&quot;:&quot;6627383111d9a22bfb9f1a08&quot;,&quot;username&quot;:&quot;art.fritschw7&quot;,&quot;password&quot;:&quot;qhxlasqw4i&quot;,&quot;email&quot;:&quot;art.fritsch@gmail.com&quot;},{&quot;id&quot;:&quot;662a9fc5bbdb361bc6f6be5c&quot;,&quot;username&quot;:&quot;bula.parkers4&quot;,&quot;password&quot;:&quot;1t750nkt1f&quot;,&quot;email&quot;:&quot;bula.parker@gmail.com&quot;},{&quot;id&quot;:&quot;662aa079bbdb361bc6f6be5e&quot;,&quot;username&quot;:&quot;zona.kuhicgi&quot;,&quot;password&quot;:&quot;qdp9yxgbuz&quot;,&quot;email&quot;:&quot;zona.kuhic@gmail.com&quot;},{&quot;id&quot;:&quot;662aa092bbdb361bc6f6be60&quot;,&quot;username&quot;:&quot;eleonora.kris66&quot;,&quot;password&quot;:&quot;4mclfwr361&quot;,&quot;email&quot;:&quot;eleonora.kris@gmail.com&quot;},{&quot;id&quot;:&quot;662aa15cbbdb361bc6f6be62&quot;,&quot;username&quot;:&quot;elmo.langyt&quot;,&quot;password&quot;:&quot;izfdz6sudy&quot;,&quot;email&quot;:&quot;elmo.lang@gmail.com&quot;},{&quot;id&quot;:&quot;662aa213bbdb361bc6f6be64&quot;,&quot;username&quot;:&quot;hilton.reingerzd&quot;,&quot;password&quot;:&quot;8si2at7for&quot;,&quot;email&quot;:&quot;hilton.reinger@gmail.com&quot;},{&quot;id&quot;:&quot;662aa251bbdb361bc6f6be66&quot;,&quot;username&quot;:&quot;michel.croninsw&quot;,&quot;password&quot;:&quot;fj1edb5v10&quot;,&quot;email&quot;:&quot;michel.cronin@gmail.com&quot;},{&quot;id&quot;:&quot;662aa313bbdb361bc6f6be68&quot;,&quot;username&quot;:&quot;aja.mcdermott3m&quot;,&quot;password&quot;:&quot;n36ifelg0i&quot;,&quot;email&quot;:&quot;aja.mcdermott@gmail.com&quot;},{&quot;id&quot;:&quot;662aa3c6bbdb361bc6f6be6a&quot;,&quot;username&quot;:&quot;mauro.jacobigf&quot;,&quot;password&quot;:&quot;leqngudkps&quot;,&quot;email&quot;:&quot;mauro.jacobi@gmail.com&quot;},{&quot;id&quot;:&quot;662aa61dbbdb361bc6f6be6c&quot;,&quot;username&quot;:&quot;teddy.schmittnl&quot;,&quot;password&quot;:&quot;ooet4yyi3w&quot;,&quot;email&quot;:&quot;teddy.schmitt@gmail.com&quot;},{&quot;id&quot;:&quot;662aa684bbdb361bc6f6be6e&quot;,&quot;username&quot;:&quot;anton.tillman7l&quot;,&quot;password&quot;:&quot;7r5if8ew18&quot;,&quot;email&quot;:&quot;anton.tillman@gmail.com&quot;},{&quot;id&quot;:&quot;662aa6ddbbdb361bc6f6be70&quot;,&quot;username&quot;:&quot;alphonso.greenholtre&quot;,&quot;password&quot;:&quot;23x73e1l16&quot;,&quot;email&quot;:&quot;alphonso.greenholt@gmail.com&quot;},{&quot;id&quot;:&quot;662aa71bbbdb361bc6f6be72&quot;,&quot;username&quot;:&quot;roger.streich0k&quot;,&quot;password&quot;:&quot;jw4u0zkck8&quot;,&quot;email&quot;:&quot;roger.streich@gmail.com&quot;},{&quot;id&quot;:&quot;662aa79dbbdb361bc6f6be74&quot;,&quot;username&quot;:&quot;gonzalo.gloverqg&quot;,&quot;password&quot;:&quot;sydd8ql63q&quot;,&quot;email&quot;:&quot;gonzalo.glover@gmail.com&quot;},{&quot;id&quot;:&quot;662aa7e4bbdb361bc6f6be76&quot;,&quot;username&quot;:&quot;ervin.rueckersm&quot;,&quot;password&quot;:&quot;xmjo55uqzc&quot;,&quot;email&quot;:&quot;ervin.ruecker@gmail.com&quot;},{&quot;id&quot;:&quot;662aa832bbdb361bc6f6be78&quot;,&quot;username&quot;:&quot;parker.prosacco1n&quot;,&quot;password&quot;:&quot;xlml74zbsr&quot;,&quot;email&quot;:&quot;parker.prosacco@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8a9bbdb361bc6f6be7a&quot;,&quot;username&quot;:&quot;nickolas.schimmelk3&quot;,&quot;password&quot;:&quot;hlaf3gj0h5&quot;,&quot;email&quot;:&quot;nickolas.schimmel@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8b7bbdb361bc6f6be7c&quot;,&quot;username&quot;:&quot;frank.muraziklu&quot;,&quot;password&quot;:&quot;l3v0fjx5tp&quot;,&quot;email&quot;:&quot;frank.murazik@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8edbbdb361bc6f6be7e&quot;,&quot;username&quot;:&quot;felton.casperk1&quot;,&quot;password&quot;:&quot;o9vimyajer&quot;,&quot;email&quot;:&quot;felton.casper@gmail.com&quot;},{&quot;id&quot;:&quot;662aa929bbdb361bc6f6be80&quot;,&quot;username&quot;:&quot;nada.macgyver98&quot;,&quot;password&quot;:&quot;m5d59s2hnf&quot;,&quot;email&quot;:&quot;nada.macgyver@gmail.com&quot;},{&quot;id&quot;:&quot;662aaa72bbdb361bc6f6be82&quot;,&quot;username&quot;:&quot;ilda.johnsz4&quot;,&quot;password&quot;:&quot;ld9r0ht6n7&quot;,&quot;email&quot;:&quot;ilda.johns@gmail.com&quot;},{&quot;id&quot;:&quot;662aaa99bbdb361bc6f6be84&quot;,&quot;username&quot;:&quot;jann.runtet1&quot;,&quot;password&quot;:&quot;ae14ru3ckl&quot;,&quot;email&quot;:&quot;jann.runte@gmail.com&quot;},{&quot;id&quot;:&quot;662aaab0bbdb361bc6f6be86&quot;,&quot;username&quot;:&quot;dion.oreillybp&quot;,&quot;password&quot;:&quot;6p7i9fq1dd&quot;,&quot;email&quot;:&quot;dion.oreilly@gmail.com&quot;},{&quot;id&quot;:&quot;662aaac5bbdb361bc6f6be88&quot;,&quot;username&quot;:&quot;wally.zboncakba&quot;,&quot;password&quot;:&quot;usdajafvoj&quot;,&quot;email&quot;:&quot;wally.zboncak@gmail.com&quot;}]}
+1 &lt; Content-Length: 4865
+{&quot;users&quot;:[{&quot;id&quot;:&quot;65f3947bb3c3d10286754f5a&quot;,&quot;username&quot;:&quot;prueba7&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba7@prueba.com&quot;},{&quot;id&quot;:&quot;660b711e8306ec2895e3b3c4&quot;,&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba1@prueba.com&quot;},{&quot;id&quot;:&quot;660b71278306ec2895e3b3c5&quot;,&quot;username&quot;:&quot;prueba2&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba2@prueba.com&quot;},{&quot;id&quot;:&quot;660b712e8306ec2895e3b3c6&quot;,&quot;username&quot;:&quot;prueba3&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba3@prueba.com&quot;},{&quot;id&quot;:&quot;660b71348306ec2895e3b3c7&quot;,&quot;username&quot;:&quot;prueba4&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba4@prueba.com&quot;},{&quot;id&quot;:&quot;660b713d8306ec2895e3b3c8&quot;,&quot;username&quot;:&quot;prueba5&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;prueba5@prueba.com&quot;},{&quot;id&quot;:&quot;660ee1696657865341baf8f5&quot;,&quot;username&quot;:&quot;saul.keeblery3&quot;,&quot;password&quot;:&quot;hvsdxbcjlx&quot;,&quot;email&quot;:&quot;saul.keebler@gmail.com&quot;},{&quot;id&quot;:&quot;660ee5886657865341baf8f8&quot;,&quot;username&quot;:&quot;jeffie.powlowskizw&quot;,&quot;password&quot;:&quot;4k0evv1xe1&quot;,&quot;email&quot;:&quot;jeffie.powlowski@gmail.com&quot;},{&quot;id&quot;:&quot;660ee5f06657865341baf8fa&quot;,&quot;username&quot;:&quot;hyo.bartolettipl&quot;,&quot;password&quot;:&quot;9edaqyzxxo&quot;,&quot;email&quot;:&quot;hyo.bartoletti@gmail.com&quot;},{&quot;id&quot;:&quot;660ee6406657865341baf8fc&quot;,&quot;username&quot;:&quot;dario.morarfl&quot;,&quot;password&quot;:&quot;g11j7mewg5&quot;,&quot;email&quot;:&quot;dario.morar@gmail.com&quot;},{&quot;id&quot;:&quot;660ee6ee6657865341baf8ff&quot;,&quot;username&quot;:&quot;thaddeus.gleasonnd&quot;,&quot;password&quot;:&quot;8oduhinkdr&quot;,&quot;email&quot;:&quot;thaddeus.gleason@gmail.com&quot;},{&quot;id&quot;:&quot;660f625eb26ae66d0e73d5dc&quot;,&quot;username&quot;:&quot;fidela.hessel5q&quot;,&quot;password&quot;:&quot;g383t70bmk&quot;,&quot;email&quot;:&quot;fidela.hessel@gmail.com&quot;},{&quot;id&quot;:&quot;660f62c0b26ae66d0e73d5de&quot;,&quot;username&quot;:&quot;deetta.weissnattb&quot;,&quot;password&quot;:&quot;5lo6thk5fj&quot;,&quot;email&quot;:&quot;deetta.weissnat@gmail.com&quot;},{&quot;id&quot;:&quot;6627382511d9a22bfb9f1a06&quot;,&quot;username&quot;:&quot;mose.johnszz&quot;,&quot;password&quot;:&quot;hwvxlm6s79&quot;,&quot;email&quot;:&quot;mose.johns@gmail.com&quot;},{&quot;id&quot;:&quot;6627383111d9a22bfb9f1a08&quot;,&quot;username&quot;:&quot;art.fritschw7&quot;,&quot;password&quot;:&quot;qhxlasqw4i&quot;,&quot;email&quot;:&quot;art.fritsch@gmail.com&quot;},{&quot;id&quot;:&quot;662a9fc5bbdb361bc6f6be5c&quot;,&quot;username&quot;:&quot;bula.parkers4&quot;,&quot;password&quot;:&quot;1t750nkt1f&quot;,&quot;email&quot;:&quot;bula.parker@gmail.com&quot;},{&quot;id&quot;:&quot;662aa079bbdb361bc6f6be5e&quot;,&quot;username&quot;:&quot;zona.kuhicgi&quot;,&quot;password&quot;:&quot;qdp9yxgbuz&quot;,&quot;email&quot;:&quot;zona.kuhic@gmail.com&quot;},{&quot;id&quot;:&quot;662aa092bbdb361bc6f6be60&quot;,&quot;username&quot;:&quot;eleonora.kris66&quot;,&quot;password&quot;:&quot;4mclfwr361&quot;,&quot;email&quot;:&quot;eleonora.kris@gmail.com&quot;},{&quot;id&quot;:&quot;662aa15cbbdb361bc6f6be62&quot;,&quot;username&quot;:&quot;elmo.langyt&quot;,&quot;password&quot;:&quot;izfdz6sudy&quot;,&quot;email&quot;:&quot;elmo.lang@gmail.com&quot;},{&quot;id&quot;:&quot;662aa213bbdb361bc6f6be64&quot;,&quot;username&quot;:&quot;hilton.reingerzd&quot;,&quot;password&quot;:&quot;8si2at7for&quot;,&quot;email&quot;:&quot;hilton.reinger@gmail.com&quot;},{&quot;id&quot;:&quot;662aa251bbdb361bc6f6be66&quot;,&quot;username&quot;:&quot;michel.croninsw&quot;,&quot;password&quot;:&quot;fj1edb5v10&quot;,&quot;email&quot;:&quot;michel.cronin@gmail.com&quot;},{&quot;id&quot;:&quot;662aa313bbdb361bc6f6be68&quot;,&quot;username&quot;:&quot;aja.mcdermott3m&quot;,&quot;password&quot;:&quot;n36ifelg0i&quot;,&quot;email&quot;:&quot;aja.mcdermott@gmail.com&quot;},{&quot;id&quot;:&quot;662aa3c6bbdb361bc6f6be6a&quot;,&quot;username&quot;:&quot;mauro.jacobigf&quot;,&quot;password&quot;:&quot;leqngudkps&quot;,&quot;email&quot;:&quot;mauro.jacobi@gmail.com&quot;},{&quot;id&quot;:&quot;662aa61dbbdb361bc6f6be6c&quot;,&quot;username&quot;:&quot;teddy.schmittnl&quot;,&quot;password&quot;:&quot;ooet4yyi3w&quot;,&quot;email&quot;:&quot;teddy.schmitt@gmail.com&quot;},{&quot;id&quot;:&quot;662aa684bbdb361bc6f6be6e&quot;,&quot;username&quot;:&quot;anton.tillman7l&quot;,&quot;password&quot;:&quot;7r5if8ew18&quot;,&quot;email&quot;:&quot;anton.tillman@gmail.com&quot;},{&quot;id&quot;:&quot;662aa6ddbbdb361bc6f6be70&quot;,&quot;username&quot;:&quot;alphonso.greenholtre&quot;,&quot;password&quot;:&quot;23x73e1l16&quot;,&quot;email&quot;:&quot;alphonso.greenholt@gmail.com&quot;},{&quot;id&quot;:&quot;662aa71bbbdb361bc6f6be72&quot;,&quot;username&quot;:&quot;roger.streich0k&quot;,&quot;password&quot;:&quot;jw4u0zkck8&quot;,&quot;email&quot;:&quot;roger.streich@gmail.com&quot;},{&quot;id&quot;:&quot;662aa79dbbdb361bc6f6be74&quot;,&quot;username&quot;:&quot;gonzalo.gloverqg&quot;,&quot;password&quot;:&quot;sydd8ql63q&quot;,&quot;email&quot;:&quot;gonzalo.glover@gmail.com&quot;},{&quot;id&quot;:&quot;662aa7e4bbdb361bc6f6be76&quot;,&quot;username&quot;:&quot;ervin.rueckersm&quot;,&quot;password&quot;:&quot;xmjo55uqzc&quot;,&quot;email&quot;:&quot;ervin.ruecker@gmail.com&quot;},{&quot;id&quot;:&quot;662aa832bbdb361bc6f6be78&quot;,&quot;username&quot;:&quot;parker.prosacco1n&quot;,&quot;password&quot;:&quot;xlml74zbsr&quot;,&quot;email&quot;:&quot;parker.prosacco@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8a9bbdb361bc6f6be7a&quot;,&quot;username&quot;:&quot;nickolas.schimmelk3&quot;,&quot;password&quot;:&quot;hlaf3gj0h5&quot;,&quot;email&quot;:&quot;nickolas.schimmel@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8b7bbdb361bc6f6be7c&quot;,&quot;username&quot;:&quot;frank.muraziklu&quot;,&quot;password&quot;:&quot;l3v0fjx5tp&quot;,&quot;email&quot;:&quot;frank.murazik@gmail.com&quot;},{&quot;id&quot;:&quot;662aa8edbbdb361bc6f6be7e&quot;,&quot;username&quot;:&quot;felton.casperk1&quot;,&quot;password&quot;:&quot;o9vimyajer&quot;,&quot;email&quot;:&quot;felton.casper@gmail.com&quot;},{&quot;id&quot;:&quot;662aa929bbdb361bc6f6be80&quot;,&quot;username&quot;:&quot;nada.macgyver98&quot;,&quot;password&quot;:&quot;m5d59s2hnf&quot;,&quot;email&quot;:&quot;nada.macgyver@gmail.com&quot;},{&quot;id&quot;:&quot;662aaa72bbdb361bc6f6be82&quot;,&quot;username&quot;:&quot;ilda.johnsz4&quot;,&quot;password&quot;:&quot;ld9r0ht6n7&quot;,&quot;email&quot;:&quot;ilda.johns@gmail.com&quot;},{&quot;id&quot;:&quot;662aaa99bbdb361bc6f6be84&quot;,&quot;username&quot;:&quot;jann.runtet1&quot;,&quot;password&quot;:&quot;ae14ru3ckl&quot;,&quot;email&quot;:&quot;jann.runte@gmail.com&quot;},{&quot;id&quot;:&quot;662aaab0bbdb361bc6f6be86&quot;,&quot;username&quot;:&quot;dion.oreillybp&quot;,&quot;password&quot;:&quot;6p7i9fq1dd&quot;,&quot;email&quot;:&quot;dion.oreilly@gmail.com&quot;},{&quot;id&quot;:&quot;662aaac5bbdb361bc6f6be88&quot;,&quot;username&quot;:&quot;wally.zboncakba&quot;,&quot;password&quot;:&quot;usdajafvoj&quot;,&quot;email&quot;:&quot;wally.zboncak@gmail.com&quot;},{&quot;id&quot;:&quot;662aaaedbbdb361bc6f6be8a&quot;,&quot;username&quot;:&quot;quinn.howem4&quot;,&quot;password&quot;:&quot;lyreprspzf&quot;,&quot;email&quot;:&quot;quinn.howe@gmail.com&quot;},{&quot;id&quot;:&quot;662aad86bbdb361bc6f6be8c&quot;,&quot;username&quot;:&quot;zonia.powlowskim9&quot;,&quot;password&quot;:&quot;kyvu76vqd6&quot;,&quot;email&quot;:&quot;zonia.powlowski@gmail.com&quot;},{&quot;id&quot;:&quot;662aadc1bbdb361bc6f6be8e&quot;,&quot;username&quot;:&quot;dong.schmelerwr&quot;,&quot;password&quot;:&quot;p395xa05y6&quot;,&quot;email&quot;:&quot;dong.schmeler@gmail.com&quot;}]}
 
 </pre>
       </div>
@@ -2771,7 +2782,7 @@ $(document).ready(function() {
   <span class="keyword indention">And</span>
   <span class="name">match each response.users == { id: '#string', username: '#string', password: '#string', email: '#string' }</span>
 
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.008</span>
 
 </div>
 
@@ -2809,10 +2820,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-27">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-28">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -2825,14 +2836,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-27" class="collapse collapsable-details ">
+  <div id="element-28" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-28">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-29">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -2844,7 +2855,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-28" class="inner-level collapse collapsable-details ">
+  <div id="steps-29" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -2987,7 +2998,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseError = read(&quot;../database/response_error.json&quot;)</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -3081,10 +3092,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.027</span>
+  <span class="lead-duration duration">0.028</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-29">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-30">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -3097,14 +3108,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-29" class="collapse collapsable-details ">
+  <div id="element-30" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-30">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-31">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3116,7 +3127,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-30" class="inner-level collapse collapsable-details ">
+  <div id="steps-31" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3246,11 +3257,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-31">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
           <a>Doc string</a>
       </div>
-      <div id="msg-31" class="collapse collapsable-details">
-        <pre>14:11:41.406 request:
+      <div id="msg-32" class="collapse collapsable-details">
+        <pre>14:24:50.023 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 55
@@ -3260,11 +3271,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.415 response time in milliseconds: 9
+14:24:50.032 response time in milliseconds: 9
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 191
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA1fQ.cK_ap-zfbUW0oG98iEYRHbnMueH1DpiCjoAK6zyiW7k&quot;}
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MzA5MCwiZXhwIjoxNzE0MDczMDkzfQ.0b2z53zlBk6bAveQv7m8B21PI1lvRtekmpb4wYB1chQ&quot;}
 
 </pre>
       </div>
@@ -3474,7 +3485,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Put</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.012</span>
 
 </div>
 
@@ -3488,13 +3499,13 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-32">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-33">
           <a>Doc string</a>
       </div>
-      <div id="msg-32" class="collapse collapsable-details">
-        <pre>14:11:41.421 request:
+      <div id="msg-33" class="collapse collapsable-details">
+        <pre>14:24:50.039 request:
 2 &gt; PUT http://localhost:8090/api/v1/users/password
-2 &gt; Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA1fQ.cK_ap-zfbUW0oG98iEYRHbnMueH1DpiCjoAK6zyiW7k
+2 &gt; Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MzA5MCwiZXhwIjoxNzE0MDczMDkzfQ.0b2z53zlBk6bAveQv7m8B21PI1lvRtekmpb4wYB1chQ
 2 &gt; Content-Type: application/json; charset=UTF-8
 2 &gt; Content-Length: 24
 2 &gt; Host: localhost:8090
@@ -3503,7 +3514,7 @@ $(document).ready(function() {
 2 &gt; Accept-Encoding: gzip,deflate
 {&quot;password&quot;:&quot;123456789&quot;}
 
-14:11:41.431 response time in milliseconds: 10
+14:24:50.049 response time in milliseconds: 10
 2 &lt; 200
 2 &lt; Content-Type: application/json
 2 &lt; Content-Length: 106
@@ -3596,7 +3607,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-33">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-34">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -3609,14 +3620,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-33" class="collapse collapsable-details ">
+  <div id="element-34" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-34">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-35">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3628,7 +3639,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-34" class="inner-level collapse collapsable-details ">
+  <div id="steps-35" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3868,7 +3879,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.008</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-35">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-36">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -3881,14 +3892,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-35" class="collapse collapsable-details ">
+  <div id="element-36" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-36">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-37">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -3900,7 +3911,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-36" class="inner-level collapse collapsable-details ">
+  <div id="steps-37" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -3989,7 +4000,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Put</span>
 
-  <span class="lead-duration duration">0.007</span>
+  <span class="lead-duration duration">0.008</span>
 
 </div>
 
@@ -4003,11 +4014,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-37">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-38">
           <a>Doc string</a>
       </div>
-      <div id="msg-37" class="collapse collapsable-details">
-        <pre>14:11:41.441 request:
+      <div id="msg-38" class="collapse collapsable-details">
+        <pre>14:24:50.058 request:
 1 &gt; PUT http://localhost:8090/api/v1/users/password
 1 &gt; Authorization: Bearer
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -4018,7 +4029,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;password&quot;:&quot;123456789&quot;}
 
-14:11:41.447 response time in milliseconds: 6
+14:24:50.065 response time in milliseconds: 7
 1 &lt; 401
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 90
@@ -4111,7 +4122,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-38">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-39">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -4124,14 +4135,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-38" class="collapse collapsable-details ">
+  <div id="element-39" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-39">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-40">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4143,7 +4154,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-39" class="inner-level collapse collapsable-details ">
+  <div id="steps-40" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4383,7 +4394,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.009</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-40">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-41">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -4396,14 +4407,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-40" class="collapse collapsable-details ">
+  <div id="element-41" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-41">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-42">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4415,7 +4426,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-41" class="inner-level collapse collapsable-details ">
+  <div id="steps-42" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4518,11 +4529,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-42">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-43">
           <a>Doc string</a>
       </div>
-      <div id="msg-42" class="collapse collapsable-details">
-        <pre>14:11:41.456 request:
+      <div id="msg-43" class="collapse collapsable-details">
+        <pre>14:24:50.075 request:
 1 &gt; PUT http://localhost:8090/api/v1/users/password
 1 &gt; Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxMjAzNjUyMSwiZXhwIjoxNzEyMDM2NTIyfQ.2Y-z7uC_P6Elpvv7hqzv76-xX-mSx3xMf_hlt2Csq68
 1 &gt; Content-Type: application/json; charset=UTF-8
@@ -4533,7 +4544,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;password&quot;:&quot;123456789&quot;}
 
-14:11:41.463 response time in milliseconds: 7
+14:24:50.082 response time in milliseconds: 7
 1 &lt; 401
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 88
@@ -4623,10 +4634,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.003</span>
+  <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-43">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-44">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -4639,14 +4650,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-43" class="collapse collapsable-details ">
+  <div id="element-44" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-44">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-45">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4658,7 +4669,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-44" class="inner-level collapse collapsable-details ">
+  <div id="steps-45" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4895,10 +4906,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.126</span>
+  <span class="lead-duration duration">0.101</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-45">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-46">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -4911,14 +4922,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-45" class="collapse collapsable-details ">
+  <div id="element-46" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-46">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-47">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -4930,7 +4941,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-46" class="inner-level collapse collapsable-details ">
+  <div id="steps-47" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -4965,7 +4976,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def userData = KarateHelper.generateRandomUser()</span>
 
-  <span class="lead-duration duration">0.113</span>
+  <span class="lead-duration duration">0.087</span>
 
 </div>
 
@@ -5114,25 +5125,25 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-47">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-48">
           <a>Doc string</a>
       </div>
-      <div id="msg-47" class="collapse collapsable-details">
-        <pre>14:11:41.590 request:
+      <div id="msg-48" class="collapse collapsable-details">
+        <pre>14:24:50.181 request:
 1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 91
+1 &gt; Content-Length: 111
 1 &gt; Host: localhost:8090
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;user&quot;:{&quot;username&quot;:&quot;quinn.howem4&quot;,&quot;email&quot;:&quot;quinn.howe@gmail.com&quot;,&quot;password&quot;:&quot;lyreprspzf&quot;}}
+{&quot;user&quot;:{&quot;username&quot;:&quot;fernanda.oberbrunneri2&quot;,&quot;email&quot;:&quot;fernanda.oberbrunner@gmail.com&quot;,&quot;password&quot;:&quot;rnalkyr647&quot;}}
 
-14:11:41.599 response time in milliseconds: 9
+14:24:50.190 response time in milliseconds: 9
 1 &lt; 201
 1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 123
-{&quot;user&quot;:{&quot;id&quot;:&quot;662aaaedbbdb361bc6f6be8a&quot;,&quot;username&quot;:&quot;quinn.howem4&quot;,&quot;password&quot;:&quot;lyreprspzf&quot;,&quot;email&quot;:&quot;quinn.howe@gmail.com&quot;}}
+1 &lt; Content-Length: 143
+{&quot;user&quot;:{&quot;id&quot;:&quot;662aae02bbdb361bc6f6be90&quot;,&quot;username&quot;:&quot;fernanda.oberbrunneri2&quot;,&quot;password&quot;:&quot;rnalkyr647&quot;,&quot;email&quot;:&quot;fernanda.oberbrunner@gmail.com&quot;}}
 
 </pre>
       </div>
@@ -5221,7 +5232,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.004</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-48">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-49">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -5234,14 +5245,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-48" class="collapse collapsable-details ">
+  <div id="element-49" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-49">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-50">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5253,7 +5264,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-49" class="inner-level collapse collapsable-details ">
+  <div id="steps-50" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5490,10 +5501,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.010</span>
+  <span class="lead-duration duration">0.008</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-50">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-51">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -5506,14 +5517,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-50" class="collapse collapsable-details ">
+  <div id="element-51" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-51">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-52">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5525,7 +5536,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-51" class="inner-level collapse collapsable-details ">
+  <div id="steps-52" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5587,7 +5598,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -5601,11 +5612,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-52">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-53">
           <a>Doc string</a>
       </div>
-      <div id="msg-52" class="collapse collapsable-details">
-        <pre>14:11:41.616 request:
+      <div id="msg-53" class="collapse collapsable-details">
+        <pre>14:24:50.204 request:
 1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 63
@@ -5615,7 +5626,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
 
-14:11:41.622 response time in milliseconds: 6
+14:24:50.211 response time in milliseconds: 6
 1 &lt; 400
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 97
@@ -5708,7 +5719,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-53">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-54">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -5721,14 +5732,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-53" class="collapse collapsable-details ">
+  <div id="element-54" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-54">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-55">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -5740,7 +5751,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-54" class="inner-level collapse collapsable-details ">
+  <div id="steps-55" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -5977,10 +5988,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.013</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-55">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-56">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -5993,14 +6004,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-55" class="collapse collapsable-details ">
+  <div id="element-56" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-56">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-57">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6012,7 +6023,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-56" class="inner-level collapse collapsable-details ">
+  <div id="steps-57" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -6074,7 +6085,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.012</span>
 
 </div>
 
@@ -6088,11 +6099,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-57">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-58">
           <a>Doc string</a>
       </div>
-      <div id="msg-57" class="collapse collapsable-details">
-        <pre>14:11:41.632 request:
+      <div id="msg-58" class="collapse collapsable-details">
+        <pre>14:24:50.221 request:
 1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 55
@@ -6102,7 +6113,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;username&quot;:&quot;prueba10&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.639 response time in milliseconds: 7
+14:24:50.232 response time in milliseconds: 10
 1 &lt; 400
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 94
@@ -6192,10 +6203,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-58">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-59">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -6208,14 +6219,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-58" class="collapse collapsable-details ">
+  <div id="element-59" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-59">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-60">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6227,7 +6238,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-59" class="inner-level collapse collapsable-details ">
+  <div id="steps-60" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -6464,10 +6475,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.007</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-60">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-61">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -6480,14 +6491,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-60" class="collapse collapsable-details ">
+  <div id="element-61" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-61">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-62">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6499,7 +6510,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-61" class="inner-level collapse collapsable-details ">
+  <div id="steps-62" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -6561,7 +6572,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.008</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -6575,11 +6586,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-62">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-63">
           <a>Doc string</a>
       </div>
-      <div id="msg-62" class="collapse collapsable-details">
-        <pre>14:11:41.649 request:
+      <div id="msg-63" class="collapse collapsable-details">
+        <pre>14:24:50.242 request:
 1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 62
@@ -6589,7 +6600,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;username&quot;:&quot;prueba10&quot;,&quot;email&quot;:&quot;prueba10@prueba.com&quot;}}
 
-14:11:41.656 response time in milliseconds: 6
+14:24:50.249 response time in milliseconds: 6
 1 &lt; 400
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 96
@@ -6679,10 +6690,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.001</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-63">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-64">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -6695,14 +6706,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-63" class="collapse collapsable-details ">
+  <div id="element-64" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-64">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-65">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6714,7 +6725,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-64" class="inner-level collapse collapsable-details ">
+  <div id="steps-65" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -6857,7 +6868,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseError = read(&quot;../database/response_error.json&quot;)</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -6951,10 +6962,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.027</span>
+  <span class="lead-duration duration">0.021</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-65">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-66">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -6967,14 +6978,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-65" class="collapse collapsable-details ">
+  <div id="element-66" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-66">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-67">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -6986,7 +6997,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-66" class="inner-level collapse collapsable-details ">
+  <div id="steps-67" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -7156,7 +7167,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.010</span>
 
 </div>
 
@@ -7170,11 +7181,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-67">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-68">
           <a>Doc string</a>
       </div>
-      <div id="msg-67" class="collapse collapsable-details">
-        <pre>14:11:41.666 request:
+      <div id="msg-68" class="collapse collapsable-details">
+        <pre>14:24:50.256 request:
 1 &gt; POST http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 85
@@ -7184,11 +7195,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;username&quot;:&quot;userdelete&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;userdelete@gmail.com&quot;}}
 
-14:11:41.677 response time in milliseconds: 11
+14:24:50.266 response time in milliseconds: 10
 1 &lt; 201
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 117
-{&quot;user&quot;:{&quot;id&quot;:&quot;662aaaedbbdb361bc6f6be8b&quot;,&quot;username&quot;:&quot;userdelete&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;userdelete@gmail.com&quot;}}
+{&quot;user&quot;:{&quot;id&quot;:&quot;662aae02bbdb361bc6f6be91&quot;,&quot;username&quot;:&quot;userdelete&quot;,&quot;password&quot;:&quot;123456&quot;,&quot;email&quot;:&quot;userdelete@gmail.com&quot;}}
 
 </pre>
       </div>
@@ -7290,7 +7301,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Delete</span>
 
-  <span class="lead-duration duration">0.012</span>
+  <span class="lead-duration duration">0.008</span>
 
 </div>
 
@@ -7304,19 +7315,19 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-68">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-69">
           <a>Doc string</a>
       </div>
-      <div id="msg-68" class="collapse collapsable-details">
-        <pre>14:11:41.681 request:
-2 &gt; DELETE http://localhost:8090/api/v1/users/662aaaedbbdb361bc6f6be8b
+      <div id="msg-69" class="collapse collapsable-details">
+        <pre>14:24:50.269 request:
+2 &gt; DELETE http://localhost:8090/api/v1/users/662aae02bbdb361bc6f6be91
 2 &gt; Host: localhost:8090
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.691 response time in milliseconds: 10
+14:24:50.276 response time in milliseconds: 7
 2 &lt; 204
 
 
@@ -7377,10 +7388,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.002</span>
+  <span class="lead-duration duration">0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-69">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-70">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -7393,14 +7404,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-69" class="collapse collapsable-details ">
+  <div id="element-70" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-70">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-71">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -7412,7 +7423,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-70" class="inner-level collapse collapsable-details ">
+  <div id="steps-71" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -7555,7 +7566,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def responseError = read(&quot;../database/response_error.json&quot;)</span>
 
-  <span class="lead-duration duration">0.000</span>
+  <span class="lead-duration duration">0.001</span>
 
 </div>
 
@@ -7652,7 +7663,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.009</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-71">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-72">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -7665,14 +7676,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-71" class="collapse collapsable-details ">
+  <div id="element-72" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-72">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-73">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -7684,7 +7695,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-72" class="inner-level collapse collapsable-details ">
+  <div id="steps-73" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -7733,11 +7744,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-73">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-74">
           <a>Doc string</a>
       </div>
-      <div id="msg-73" class="collapse collapsable-details">
-        <pre>14:11:41.700 request:
+      <div id="msg-74" class="collapse collapsable-details">
+        <pre>14:24:50.284 request:
 1 &gt; GET http://localhost:8090/api/v1/users/660b711e8306ec2895e3b3c4
 1 &gt; Host: localhost:8090
 1 &gt; Connection: Keep-Alive
@@ -7745,7 +7756,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.707 response time in milliseconds: 7
+14:24:50.292 response time in milliseconds: 8
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 115
@@ -7838,7 +7849,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-74">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-75">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -7851,14 +7862,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-74" class="collapse collapsable-details ">
+  <div id="element-75" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-75">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-76">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -7870,7 +7881,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-75" class="inner-level collapse collapsable-details ">
+  <div id="steps-76" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -8107,10 +8118,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.010</span>
+  <span class="lead-duration duration">0.008</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-76">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-77">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -8123,14 +8134,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-76" class="collapse collapsable-details ">
+  <div id="element-77" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-77">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-78">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -8142,7 +8153,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-77" class="inner-level collapse collapsable-details ">
+  <div id="steps-78" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -8177,7 +8188,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Get</span>
 
-  <span class="lead-duration duration">0.010</span>
+  <span class="lead-duration duration">0.007</span>
 
 </div>
 
@@ -8191,11 +8202,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-78">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-79">
           <a>Doc string</a>
       </div>
-      <div id="msg-78" class="collapse collapsable-details">
-        <pre>14:11:41.717 request:
+      <div id="msg-79" class="collapse collapsable-details">
+        <pre>14:24:50.300 request:
 1 &gt; GET http://localhost:8090/api/v1/users/1234567
 1 &gt; Host: localhost:8090
 1 &gt; Connection: Keep-Alive
@@ -8203,7 +8214,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.726 response time in milliseconds: 8
+14:24:50.307 response time in milliseconds: 6
 1 &lt; 404
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 88
@@ -8296,7 +8307,7 @@ $(document).ready(function() {
   <span class="lead-duration duration">0.003</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-79">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-80">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -8309,14 +8320,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-79" class="collapse collapsable-details ">
+  <div id="element-80" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-80">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-81">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -8328,7 +8339,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-80" class="inner-level collapse collapsable-details ">
+  <div id="steps-81" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -8565,10 +8576,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.015</span>
+  <span class="lead-duration duration">0.013</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-81">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-82">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario</span>
@@ -8581,14 +8592,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-81" class="collapse collapsable-details ">
+  <div id="element-82" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-82">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-83">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -8600,7 +8611,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-82" class="inner-level collapse collapsable-details ">
+  <div id="steps-83" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -8662,7 +8673,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Put</span>
 
-  <span class="lead-duration duration">0.014</span>
+  <span class="lead-duration duration">0.011</span>
 
 </div>
 
@@ -8676,11 +8687,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-83">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-84">
           <a>Doc string</a>
       </div>
-      <div id="msg-83" class="collapse collapsable-details">
-        <pre>14:11:41.737 request:
+      <div id="msg-84" class="collapse collapsable-details">
+        <pre>14:24:50.317 request:
 1 &gt; PUT http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 115
@@ -8690,7 +8701,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;id&quot;:&quot;660b711e8306ec2895e3b3c4&quot;,&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba1@prueba.com&quot;}}
 
-14:11:41.750 response time in milliseconds: 12
+14:24:50.327 response time in milliseconds: 10
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 115
@@ -8780,10 +8791,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.002</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-84">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-85">
 
 <div class="brief passed">
   <span class="keyword indention">Background</span>
@@ -8796,14 +8807,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-84" class="collapse collapsable-details ">
+  <div id="element-85" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-85">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-86">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -8815,7 +8826,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-85" class="inner-level collapse collapsable-details ">
+  <div id="steps-86" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -9052,10 +9063,10 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.010</span>
+  <span class="lead-duration duration">0.011</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-86">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-87">
 
 <div class="brief passed">
   <span class="keyword indention">Scenario Outline</span>
@@ -9068,14 +9079,14 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-86" class="collapse collapsable-details ">
+  <div id="element-87" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-87">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-88">
 
 <div class="brief passed">
   <span class="keyword indention">Steps</span>
@@ -9087,7 +9098,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-87" class="inner-level collapse collapsable-details ">
+  <div id="steps-88" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -9149,7 +9160,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Put</span>
 
-  <span class="lead-duration duration">0.009</span>
+  <span class="lead-duration duration">0.010</span>
 
 </div>
 
@@ -9163,11 +9174,11 @@ $(document).ready(function() {
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-88">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-89">
           <a>Doc string</a>
       </div>
-      <div id="msg-88" class="collapse collapsable-details">
-        <pre>14:11:41.758 request:
+      <div id="msg-89" class="collapse collapsable-details">
+        <pre>14:24:50.336 request:
 1 &gt; PUT http://localhost:8090/api/v1/users
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 118
@@ -9177,7 +9188,7 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;user&quot;:{&quot;id&quot;:&quot;660b711e8306ec2895e3b3c4222&quot;,&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;,&quot;email&quot;:&quot;prueba1@prueba.com&quot;}}
 
-14:11:41.767 response time in milliseconds: 8
+14:24:50.345 response time in milliseconds: 9
 1 &lt; 404
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 80

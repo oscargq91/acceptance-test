@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>25 abr 2024, 14:11</td>
+      <td>25 abr 2024, 14:24</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@LoginSuccessfullyAddLog</td>
-          <td      class="passed"    >12</td>
-          <td >0</td>
-          <td >0</td>
+          <td      class="passed"    >9</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >2</td>
           <td >0</td>
           <td >0</td>
           <td class="total">12</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="56903700">0.056</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="2719962499">2.719</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.056</span>
+  <span class="lead-duration duration">2.719</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Successfully login add Log</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
@@ -278,7 +278,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">0.012</span>
 
 </div>
 
@@ -296,7 +296,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>14:11:41.275 request:
+        <pre>14:24:47.223 request:
 1 &gt; POST http://localhost:8090/api/v1/users/login
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 55
@@ -306,11 +306,11 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;login&quot;:{&quot;username&quot;:&quot;prueba1&quot;,&quot;password&quot;:&quot;123456789&quot;}}
 
-14:11:41.285 response time in milliseconds: 10
+14:24:47.234 response time in milliseconds: 10
 1 &lt; 200
 1 &lt; Content-Type: application/json
 1 &lt; Content-Length: 191
-{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA0fQ.xAKpbSj3aqndCvElQsUsWG9JoynpjzGQBLZk6BIvDqU&quot;}
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MzA4NywiZXhwIjoxNzE0MDczMDkwfQ.KZVlR1RZZWcySNDPIil0O5UX3FCDGsrSeA-VPINtqAo&quot;}
 
 </pre>
       </div>
@@ -383,7 +383,7 @@ $(document).ready(function() {
 
 <div class="brief step-name-Given passed">
   <span class="keyword indention">Given</span>
-  <span class="name">url  'http://localhost:8070/api/v1'</span>
+  <span class="name">url  'http://logs-rest:8070/api/v1'</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -439,7 +439,7 @@ $(document).ready(function() {
   <span class="keyword indention">*</span>
   <span class="name">def date = KarateHelper.generateDate()</span>
 
-  <span class="lead-duration duration">0.031</span>
+  <span class="lead-duration duration">0.027</span>
 
 </div>
 
@@ -489,11 +489,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
+<div class="brief step-name-When failed">
   <span class="keyword indention">When</span>
   <span class="name">method Get</span>
 
-  <span class="lead-duration duration">0.011</span>
+  <span class="lead-duration duration">2.678</span>
 
 </div>
 
@@ -502,30 +502,41 @@ $(document).ready(function() {
 
 
 
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-4">
+          <a>http</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details  in ">
+        <pre>http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+classpath:karate/user.feature:32</pre>
+      </div>
+    </div>
+  </div>
+
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>14:11:41.321 request:
-2 &gt; GET http://localhost:8070/api/v1/logs/userManagementApiRest
-2 &gt; min-date: 2024-04-25T13:11:41.3190530
-2 &gt; Host: localhost:8070
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>14:24:47.265 request:
+2 &gt; GET http://logs-rest:8070/api/v1/logs/userManagementApiRest
+2 &gt; min-date: 2024-04-25T07:24:47.2633759
+2 &gt; Host: logs-rest:8070
 2 &gt; Connection: Keep-Alive
 2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 2 &gt; Accept-Encoding: gzip,deflate
 
 
-14:11:41.330 response time in milliseconds: 9
-2 &lt; 200
-2 &lt; Content-Type: application/json
-2 &lt; Content-Length: 1427
-[{&quot;id&quot;:&quot;662a393ca5945c055c2058ae&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:05:01&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3943a5945c055c2058af&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:06:43&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3958a5945c055c2058b0&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:04&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a396ca5945c055c2058b1&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;ERROR&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:24&quot;,&quot;summary&quot;:&quot;Autenticacion Fallida&quot;,&quot;description&quot;:&quot;Not found user&quot;},{&quot;id&quot;:&quot;662a3970a5945c055c2058b2&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:07:28&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;},{&quot;id&quot;:&quot;662a3a528ae1ad7633a2b440&quot;,&quot;application&quot;:&quot;userManagementApiRest&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;UseCase&quot;,&quot;timestamp&quot;:&quot;2024-04-25T16:11:14&quot;,&quot;summary&quot;:&quot;Autenticacion exitosa&quot;,&quot;description&quot;:&quot;Usuario prueba1 ha generado el token de sesion de forma correcta&quot;}]
-
+14:24:49.942 java.net.UnknownHostException: Host desconocido (logs-rest), http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+14:24:49.943 classpath:karate/user.feature:32
+When method Get
+http call failed after 2677 milliseconds for url: http://logs-rest:8070/api/v1/logs/userManagementApiRest
+classpath:karate/user.feature:32
 </pre>
       </div>
     </div>
@@ -541,7 +552,7 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
   <span class="name">status 200</span>
 
@@ -568,11 +579,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-And passed">
+<div class="brief step-name-And skipped">
   <span class="keyword indention">And</span>
   <span class="name">match each response == { id: '#string', application : '#string', type: '#string', timestamp: '#string',module: '#string',summary:'#string', description: '#string' }</span>
 
-  <span class="lead-duration duration">0.001</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
