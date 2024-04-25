@@ -1,6 +1,72 @@
-`12:41:19.003 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
-‘12:41:19.009 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1712252479008
->12:41:20.051 [Test worker] DEBUG com.intuit.karate - request:
+`14:11:39.454 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+‘14:11:39.460 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1714072299459
+>14:11:40.477 [Test worker] DEBUG com.intuit.karate - request:
+*1 > POST http://localhost:8070/api/v1/log
+21 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 192
+1 > Host: localhost:8070
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"1 > Accept-Encoding: gzip,deflate
+Á{"application":"acceptance-test","type":"INFO","module":"feature","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"}
+
+W14:11:40.507 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 28
+1 < 201
+#1 < Content-Type: application/json
+1 < Content-Length: 267
+Œ{"id":"662aaaec9143e034b35179f1","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:11:40.49725871","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"}
+
+>14:11:40.534 [Test worker] DEBUG com.intuit.karate - request:
+*1 > POST http://localhost:8070/api/v1/log
+21 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 160
+1 > Host: localhost:8070
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"1 > Accept-Encoding: gzip,deflate
+¡{"type":"INFO","module":"feature","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"}
+
+V14:11:40.540 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
+1 < 404
+#1 < Content-Type: application/json
+1 < Content-Length: 96
+a{"errors":[{"httpStatus":404,"domain":"POST:/log","message":"A required attribute is missing"}]}
+
+>14:11:40.556 [Test worker] DEBUG com.intuit.karate - request:
+*1 > GET http://localhost:8070/api/v1/logs
+1 > Host: localhost:8070
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"1 > Accept-Encoding: gzip,deflate
+
+
+W14:11:40.573 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 16
+1 < 200
+#1 < Content-Type: application/json
+1 < Content-Length: 34464
+¡[{"id":"662a9fc49143e034b3517971","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:24:04","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662a9fc49143e034b3517973","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:24:04","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a9fc49143e034b3517972","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:24:04","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662a9fc49143e034b3517974","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:24:04","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa0799143e034b3517975","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:27:05","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa0799143e034b3517976","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:27:05","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa0799143e034b3517977","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:27:05","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa0799143e034b3517978","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:27:05","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa0929143e034b351797a","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:27:30","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa0929143e034b351797b","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:27:30","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa0929143e034b351797c","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:27:30","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa0929143e034b351797d","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:27:30","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa15b9143e034b351797f","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:30:51","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa15b9143e034b3517980","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:30:51","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa15b9143e034b3517981","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:30:51","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa15c9143e034b3517982","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:30:52","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa2139143e034b3517984","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:33:55","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa2139143e034b3517985","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:33:55","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa2139143e034b3517986","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:33:55","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa2139143e034b3517987","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:33:55","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa2519143e034b3517989","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:34:57","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa2519143e034b351798a","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:34:57","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa2519143e034b351798b","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:34:57","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa2519143e034b351798c","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:34:57","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa3139143e034b351798e","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:38:11","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa3139143e034b351798f","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:38:11","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa3139143e034b3517990","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:38:11","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa3139143e034b3517991","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:38:11","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa3c69143e034b3517993","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:41:10","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa3c69143e034b3517994","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:41:10","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa3c69143e034b3517995","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:41:10","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa3c69143e034b3517996","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:41:10","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa61d9143e034b3517998","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:51:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa61d9143e034b3517999","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:51:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa61d9143e034b351799a","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:51:09","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa61d9143e034b351799b","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:51:09","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa61d9143e034b351799c","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:51:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6839143e034b351799e","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:52:51","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6839143e034b351799f","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:52:51","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6839143e034b35179a0","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:52:51","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa6849143e034b35179a1","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:52:52","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa6849143e034b35179a2","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:52:52","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6dd9143e034b35179a4","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:54:21","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6dd9143e034b35179a5","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:54:21","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa6dd9143e034b35179a6","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:54:21","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa6dd9143e034b35179a7","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:54:21","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa6dd9143e034b35179a8","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:54:21","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa71a9143e034b35179aa","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:55:22","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa71a9143e034b35179ab","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:55:22","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa71b9143e034b35179ac","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:55:22","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa71b9143e034b35179ad","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:55:23","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa71b9143e034b35179ae","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:55:23","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa79c9143e034b35179b0","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:57:32","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa79c9143e034b35179b1","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:57:32","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa79c9143e034b35179b2","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:57:32","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa79c9143e034b35179b3","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:57:32","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa79c9143e034b35179b4","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:57:32","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa7e49143e034b35179b6","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:58:44","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa7e49143e034b35179b7","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:58:44","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa7e49143e034b35179b8","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:58:44","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa7e49143e034b35179b9","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T06:58:44","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa7e49143e034b35179ba","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T06:58:44","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8319143e034b35179bc","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:00:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8319143e034b35179bd","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:00:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8329143e034b35179be","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:00:02","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa8329143e034b35179bf","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:00:02","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa8329143e034b35179c0","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:00:02","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8a99143e034b35179c2","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8a99143e034b35179c3","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8a99143e034b35179c4","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:02:01","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa8a99143e034b35179c5","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:02:01","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa8a99143e034b35179c6","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8b79143e034b35179c8","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:15","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8b79143e034b35179c9","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:15","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8b79143e034b35179ca","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:02:15","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa8b79143e034b35179cb","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:02:15","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa8b79143e034b35179cc","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:02:15","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8ed9143e034b35179ce","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:03:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8ed9143e034b35179cf","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:03:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa8ed9143e034b35179d0","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:03:09","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa8ed9143e034b35179d1","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:03:09","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa8ed9143e034b35179d2","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:03:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa9289143e034b35179d4","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:04:08","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa9289143e034b35179d5","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:04:08","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa9289143e034b35179d6","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:04:08","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aa9299143e034b35179d7","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:04:09","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aa9299143e034b35179d8","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:04:09","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa729143e034b35179da","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:09:38","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa729143e034b35179db","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:09:38","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa729143e034b35179dc","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:09:38","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aaa729143e034b35179dd","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:09:38","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aaa729143e034b35179de","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:09:38","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa999143e034b35179e0","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:17","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa999143e034b35179e1","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:17","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaa999143e034b35179e2","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:10:17","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aaa999143e034b35179e3","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:10:17","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aaa999143e034b35179e4","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:17","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaab09143e034b35179e6","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:40","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaab09143e034b35179e7","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:40","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaab09143e034b35179e8","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:10:40","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aaab09143e034b35179e9","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:10:40","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aaab09143e034b35179ea","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:10:40","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaac59143e034b35179ec","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:11:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaac59143e034b35179ed","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:11:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aaac59143e034b35179ee","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:11:01","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662aaac59143e034b35179ef","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T07:11:01","summary":"Autenticacion Fallida","description":"Unauthorized: Incorrect password"},{"id":"662aaac59143e034b35179f0","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T07:11:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a2c62a05db44d09a5e51c","application":"nombre_de_la_aplicacion","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:11:46.948","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a2e711cc3eb4df53a0e63","application":"nombre_de_la_aplicacion","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:20:33.226","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a319a8a7d827af63b4326","application":"nombre_de_la_aplicacion2","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:34:02.645","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a319b8a7d827af63b4327","application":"nombre_de_la_aplicacion2","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:34:03.627","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a319d8a7d827af63b4328","application":"nombre_de_la_aplicacion2","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:34:05.79","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a31a28a7d827af63b4329","application":"nombre_de_la_aplicacion3","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T10:34:10.07","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a3c119143e034b351796f","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T11:18:41","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3cc29143e034b3517970","application":"nombre_de_la_aplicacion3","type":"tipo_de_log","module":"clase_o_modulo_que_lo_genera","timestamp":"2024-04-25T11:21:38.428","summary":"resumen_del_log","description":"descripcion_del_log"},{"id":"662a393ca5945c055c2058ae","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:05:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3943a5945c055c2058af","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:06:43","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3958a5945c055c2058b0","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T16:07:04","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662a396ca5945c055c2058b1","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T16:07:24","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662a3970a5945c055c2058b2","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:07:28","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3a528ae1ad7633a2b440","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:11:14","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662aa0919143e034b3517979","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:27:29.908","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa15b9143e034b351797e","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:30:51.15","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa2139143e034b3517983","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:33:55.021","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa2509143e034b3517988","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:34:56.619","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa3129143e034b351798d","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:38:10.388","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa3c59143e034b3517992","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:41:09.512","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa61c9143e034b3517997","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:51:08.887","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa6839143e034b351799d","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:52:51.174","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa6dc9143e034b35179a3","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:54:20.816","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa71a9143e034b35179a9","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:55:22.196","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa79b9143e034b35179af","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:57:31.916","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa7e39143e034b35179b5","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:58:43.873","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8319143e034b35179bb","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:00:01.175","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8a89143e034b35179c1","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:02:00.793","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8b69143e034b35179c7","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:02:14.437","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8ec9143e034b35179cd","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:03:08.331","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa9289143e034b35179d3","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:04:08.19","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaa719143e034b35179d9","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:09:37.352","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaa989143e034b35179df","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:10:16.235","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaaaf9143e034b35179e5","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:10:39.741","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaac49143e034b35179eb","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:11:00.41","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaaec9143e034b35179f1","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:11:40.497","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"}]
+
+>14:11:40.620 [Test worker] DEBUG com.intuit.karate - request:
+:1 > GET http://localhost:8070/api/v1/logs/acceptance-test
+1 > Host: localhost:8070
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"1 > Accept-Encoding: gzip,deflate
+
+
+W14:11:40.632 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 200
+#1 < Content-Type: application/json
+1 < Content-Length: 5784
+™-[{"id":"662aa0919143e034b3517979","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:27:29.908","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa15b9143e034b351797e","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:30:51.15","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa2139143e034b3517983","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:33:55.021","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa2509143e034b3517988","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:34:56.619","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa3129143e034b351798d","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:38:10.388","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa3c59143e034b3517992","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:41:09.512","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa61c9143e034b3517997","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:51:08.887","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa6839143e034b351799d","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:52:51.174","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa6dc9143e034b35179a3","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:54:20.816","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa71a9143e034b35179a9","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:55:22.196","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa79b9143e034b35179af","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:57:31.916","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa7e39143e034b35179b5","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T18:58:43.873","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8319143e034b35179bb","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:00:01.175","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8a89143e034b35179c1","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:02:00.793","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8b69143e034b35179c7","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:02:14.437","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa8ec9143e034b35179cd","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:03:08.331","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aa9289143e034b35179d3","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:04:08.19","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaa719143e034b35179d9","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:09:37.352","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaa989143e034b35179df","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:10:16.235","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaaaf9143e034b35179e5","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:10:39.741","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaac49143e034b35179eb","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:11:00.41","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"},{"id":"662aaaec9143e034b35179f1","application":"acceptance-test","type":"INFO","module":"feature","timestamp":"2024-04-25T19:11:40.497","summary":"Log prueba","description":"Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento"}]
+
+:---------------------------------------------------------
+&feature: classpath:karate/log.feature
+7scenarios:  4 | passed:  4 | failed:  0 | time: 0,2929
+:---------------------------------------------------------
+
+14:11:41.231 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 2 (0 remaining) classpath:karate/log.feature
+>14:11:41.252 [Test worker] DEBUG com.intuit.karate - request:
 21 > POST http://localhost:8090/api/v1/users/login
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 55
@@ -10,13 +76,44 @@
 "1 > Accept-Encoding: gzip,deflate
 8{"login":{"username":"prueba1","password":"123456789"}}
 
-W12:41:20.082 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 29
+W14:11:41.263 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 10
 1 < 200
 #1 < Content-Type: application/json
 1 < Content-Length: 191
-À{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxMjI1MjQ4MCwiZXhwIjoxNzEyMjUyNDgzfQ.flVRet_Ok3RgxB5YX3Gf61YMkeAC3rJoYTAVZ8K91V8"}
+À{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA0fQ.xAKpbSj3aqndCvElQsUsWG9JoynpjzGQBLZk6BIvDqU"}
 
->12:41:20.109 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.275 [Test worker] DEBUG com.intuit.karate - request:
+21 > POST http://localhost:8090/api/v1/users/login
+21 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 55
+1 > Host: localhost:8090
+1 > Connection: Keep-Alive
+71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"1 > Accept-Encoding: gzip,deflate
+8{"login":{"username":"prueba1","password":"123456789"}}
+
+W14:11:41.285 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 10
+1 < 200
+#1 < Content-Type: application/json
+1 < Content-Length: 191
+À{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA0fQ.xAKpbSj3aqndCvElQsUsWG9JoynpjzGQBLZk6BIvDqU"}
+
+>14:11:41.320 [Test worker] DEBUG com.intuit.karate - request:
+@2 > GET http://localhost:8070/api/v1/logs/userManagementApiRest
+*2 > min-date: 2024-04-25T13:11:41.3190530
+2 > Host: localhost:8070
+2 > Connection: Keep-Alive
+72 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
+"2 > Accept-Encoding: gzip,deflate
+
+
+V14:11:41.330 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
+2 < 200
+#2 < Content-Type: application/json
+2 < Content-Length: 1427
+”[{"id":"662a393ca5945c055c2058ae","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:05:01","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3943a5945c055c2058af","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:06:43","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3958a5945c055c2058b0","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T16:07:04","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662a396ca5945c055c2058b1","application":"userManagementApiRest","type":"ERROR","module":"UseCase","timestamp":"2024-04-25T16:07:24","summary":"Autenticacion Fallida","description":"Not found user"},{"id":"662a3970a5945c055c2058b2","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:07:28","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"},{"id":"662a3a528ae1ad7633a2b440","application":"userManagementApiRest","type":"INFO","module":"UseCase","timestamp":"2024-04-25T16:11:14","summary":"Autenticacion exitosa","description":"Usuario prueba1 ha generado el token de sesion de forma correcta"}]
+
+>14:11:41.342 [Test worker] DEBUG com.intuit.karate - request:
 21 > POST http://localhost:8090/api/v1/users/login
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 58
@@ -26,13 +123,13 @@
 "1 > Accept-Encoding: gzip,deflate
 ;{"login":{"username":"prueba1222","password":"123456789"}}
 
-V12:41:20.117 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
+V14:11:41.350 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
 1 < 404
 #1 < Content-Type: application/json
 1 < Content-Length: 87
 X{"errors":[{"httpStatus":404,"domain":"POST:/users/login","message":"Not found user"}]}
 
->12:41:20.131 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.361 [Test worker] DEBUG com.intuit.karate - request:
 21 > POST http://localhost:8090/api/v1/users/login
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 59
@@ -42,13 +139,13 @@
 "1 > Accept-Encoding: gzip,deflate
 <{"login":{"username":"prueba1","password":"1234567891111"}}
 
-V12:41:20.139 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
+V14:11:41.370 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
 1 < 401
 #1 < Content-Type: application/json
 1 < Content-Length: 105
 j{"errors":[{"httpStatus":401,"domain":"POST:/users/login","message":"Unauthorized: Incorrect password"}]}
 
->12:41:20.152 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.381 [Test worker] DEBUG com.intuit.karate - request:
 +1 > GET http://localhost:8090/api/v1/users
 1 > Host: localhost:8090
 1 > Connection: Keep-Alive
@@ -56,13 +153,13 @@
 "1 > Accept-Encoding: gzip,deflate
 
 
-V12:41:20.160 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
+W14:11:41.391 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 10
 1 < 200
 #1 < Content-Type: application/json
-1 < Content-Length: 1007
-ð{"users":[{"id":"65f3947bb3c3d10286754f5a","username":"prueba7","password":"123456","email":"prueba7@prueba.com"},{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"},{"id":"660b71278306ec2895e3b3c5","username":"prueba2","password":"123456","email":"prueba2@prueba.com"},{"id":"660b712e8306ec2895e3b3c6","username":"prueba3","password":"123456","email":"prueba3@prueba.com"},{"id":"660b71348306ec2895e3b3c7","username":"prueba4","password":"123456","email":"prueba4@prueba.com"},{"id":"660b713d8306ec2895e3b3c8","username":"prueba5","password":"123456","email":"prueba5@prueba.com"},{"id":"660ee1696657865341baf8f5","username":"saul.keeblery3","password":"hvsdxbcjlx","email":"saul.keebler@gmail.com"},{"id":"660ee5886657865341baf8f8","username":"jeffie.powlowskizw","password":"4k0evv1xe1","email":"jeffie.powlowski@gmail.com"},{"id":"660ee5f06657865341baf8fa","username":"hyo.bartolettipl","password":"9edaqyzxxo","email":"hyo.bartoletti@gmail.com"}]}
+1 < Content-Length: 4504
+™#{"users":[{"id":"65f3947bb3c3d10286754f5a","username":"prueba7","password":"123456","email":"prueba7@prueba.com"},{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"},{"id":"660b71278306ec2895e3b3c5","username":"prueba2","password":"123456","email":"prueba2@prueba.com"},{"id":"660b712e8306ec2895e3b3c6","username":"prueba3","password":"123456","email":"prueba3@prueba.com"},{"id":"660b71348306ec2895e3b3c7","username":"prueba4","password":"123456","email":"prueba4@prueba.com"},{"id":"660b713d8306ec2895e3b3c8","username":"prueba5","password":"123456","email":"prueba5@prueba.com"},{"id":"660ee1696657865341baf8f5","username":"saul.keeblery3","password":"hvsdxbcjlx","email":"saul.keebler@gmail.com"},{"id":"660ee5886657865341baf8f8","username":"jeffie.powlowskizw","password":"4k0evv1xe1","email":"jeffie.powlowski@gmail.com"},{"id":"660ee5f06657865341baf8fa","username":"hyo.bartolettipl","password":"9edaqyzxxo","email":"hyo.bartoletti@gmail.com"},{"id":"660ee6406657865341baf8fc","username":"dario.morarfl","password":"g11j7mewg5","email":"dario.morar@gmail.com"},{"id":"660ee6ee6657865341baf8ff","username":"thaddeus.gleasonnd","password":"8oduhinkdr","email":"thaddeus.gleason@gmail.com"},{"id":"660f625eb26ae66d0e73d5dc","username":"fidela.hessel5q","password":"g383t70bmk","email":"fidela.hessel@gmail.com"},{"id":"660f62c0b26ae66d0e73d5de","username":"deetta.weissnattb","password":"5lo6thk5fj","email":"deetta.weissnat@gmail.com"},{"id":"6627382511d9a22bfb9f1a06","username":"mose.johnszz","password":"hwvxlm6s79","email":"mose.johns@gmail.com"},{"id":"6627383111d9a22bfb9f1a08","username":"art.fritschw7","password":"qhxlasqw4i","email":"art.fritsch@gmail.com"},{"id":"662a9fc5bbdb361bc6f6be5c","username":"bula.parkers4","password":"1t750nkt1f","email":"bula.parker@gmail.com"},{"id":"662aa079bbdb361bc6f6be5e","username":"zona.kuhicgi","password":"qdp9yxgbuz","email":"zona.kuhic@gmail.com"},{"id":"662aa092bbdb361bc6f6be60","username":"eleonora.kris66","password":"4mclfwr361","email":"eleonora.kris@gmail.com"},{"id":"662aa15cbbdb361bc6f6be62","username":"elmo.langyt","password":"izfdz6sudy","email":"elmo.lang@gmail.com"},{"id":"662aa213bbdb361bc6f6be64","username":"hilton.reingerzd","password":"8si2at7for","email":"hilton.reinger@gmail.com"},{"id":"662aa251bbdb361bc6f6be66","username":"michel.croninsw","password":"fj1edb5v10","email":"michel.cronin@gmail.com"},{"id":"662aa313bbdb361bc6f6be68","username":"aja.mcdermott3m","password":"n36ifelg0i","email":"aja.mcdermott@gmail.com"},{"id":"662aa3c6bbdb361bc6f6be6a","username":"mauro.jacobigf","password":"leqngudkps","email":"mauro.jacobi@gmail.com"},{"id":"662aa61dbbdb361bc6f6be6c","username":"teddy.schmittnl","password":"ooet4yyi3w","email":"teddy.schmitt@gmail.com"},{"id":"662aa684bbdb361bc6f6be6e","username":"anton.tillman7l","password":"7r5if8ew18","email":"anton.tillman@gmail.com"},{"id":"662aa6ddbbdb361bc6f6be70","username":"alphonso.greenholtre","password":"23x73e1l16","email":"alphonso.greenholt@gmail.com"},{"id":"662aa71bbbdb361bc6f6be72","username":"roger.streich0k","password":"jw4u0zkck8","email":"roger.streich@gmail.com"},{"id":"662aa79dbbdb361bc6f6be74","username":"gonzalo.gloverqg","password":"sydd8ql63q","email":"gonzalo.glover@gmail.com"},{"id":"662aa7e4bbdb361bc6f6be76","username":"ervin.rueckersm","password":"xmjo55uqzc","email":"ervin.ruecker@gmail.com"},{"id":"662aa832bbdb361bc6f6be78","username":"parker.prosacco1n","password":"xlml74zbsr","email":"parker.prosacco@gmail.com"},{"id":"662aa8a9bbdb361bc6f6be7a","username":"nickolas.schimmelk3","password":"hlaf3gj0h5","email":"nickolas.schimmel@gmail.com"},{"id":"662aa8b7bbdb361bc6f6be7c","username":"frank.muraziklu","password":"l3v0fjx5tp","email":"frank.murazik@gmail.com"},{"id":"662aa8edbbdb361bc6f6be7e","username":"felton.casperk1","password":"o9vimyajer","email":"felton.casper@gmail.com"},{"id":"662aa929bbdb361bc6f6be80","username":"nada.macgyver98","password":"m5d59s2hnf","email":"nada.macgyver@gmail.com"},{"id":"662aaa72bbdb361bc6f6be82","username":"ilda.johnsz4","password":"ld9r0ht6n7","email":"ilda.johns@gmail.com"},{"id":"662aaa99bbdb361bc6f6be84","username":"jann.runtet1","password":"ae14ru3ckl","email":"jann.runte@gmail.com"},{"id":"662aaab0bbdb361bc6f6be86","username":"dion.oreillybp","password":"6p7i9fq1dd","email":"dion.oreilly@gmail.com"},{"id":"662aaac5bbdb361bc6f6be88","username":"wally.zboncakba","password":"usdajafvoj","email":"wally.zboncak@gmail.com"}]}
 
->12:41:20.177 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.406 [Test worker] DEBUG com.intuit.karate - request:
 21 > POST http://localhost:8090/api/v1/users/login
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 55
@@ -72,15 +169,15 @@
 "1 > Accept-Encoding: gzip,deflate
 8{"login":{"username":"prueba1","password":"123456789"}}
 
-V12:41:20.186 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
+V14:11:41.415 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
 1 < 200
 #1 < Content-Type: application/json
 1 < Content-Length: 191
-À{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxMjI1MjQ4MCwiZXhwIjoxNzEyMjUyNDgzfQ.flVRet_Ok3RgxB5YX3Gf61YMkeAC3rJoYTAVZ8K91V8"}
+À{"token":"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA1fQ.cK_ap-zfbUW0oG98iEYRHbnMueH1DpiCjoAK6zyiW7k"}
 
->12:41:20.193 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.421 [Test worker] DEBUG com.intuit.karate - request:
 42 > PUT http://localhost:8090/api/v1/users/password
-Ç2 > Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxMjI1MjQ4MCwiZXhwIjoxNzEyMjUyNDgzfQ.flVRet_Ok3RgxB5YX3Gf61YMkeAC3rJoYTAVZ8K91V8
+Ç2 > Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxNDA3MjMwMSwiZXhwIjoxNzE0MDcyMzA1fQ.cK_ap-zfbUW0oG98iEYRHbnMueH1DpiCjoAK6zyiW7k
 22 > Content-Type: application/json; charset=UTF-8
 2 > Content-Length: 24
 2 > Host: localhost:8090
@@ -89,13 +186,13 @@
 "2 > Accept-Encoding: gzip,deflate
 {"password":"123456789"}
 
-W12:41:20.204 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 11
+W14:11:41.431 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 10
 2 < 200
 #2 < Content-Type: application/json
 2 < Content-Length: 106
 k{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"}
 
->12:41:20.216 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.441 [Test worker] DEBUG com.intuit.karate - request:
 41 > PUT http://localhost:8090/api/v1/users/password
 1 > Authorization: Bearer
 21 > Content-Type: application/json; charset=UTF-8
@@ -106,13 +203,13 @@
 "1 > Accept-Encoding: gzip,deflate
 {"password":"123456789"}
 
-V12:41:20.222 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
+V14:11:41.447 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
 1 < 401
 #1 < Content-Type: application/json
 1 < Content-Length: 90
 [{"errors":[{"httpStatus":401,"domain":"PUT:/users/password","message":"Token malformed"}]}
 
->12:41:20.233 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.456 [Test worker] DEBUG com.intuit.karate - request:
 41 > PUT http://localhost:8090/api/v1/users/password
 Ç1 > Authorization: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJwcnVlYmExIiwiaXNzIjoiaW5nZXNpcy51bmlxdWluZGlvLmVkdS5jbyIsImlhdCI6MTcxMjAzNjUyMSwiZXhwIjoxNzEyMDM2NTIyfQ.2Y-z7uC_P6Elpvv7hqzv76-xX-mSx3xMf_hlt2Csq68
 21 > Content-Type: application/json; charset=UTF-8
@@ -123,29 +220,29 @@
 "1 > Accept-Encoding: gzip,deflate
 {"password":"123456789"}
 
-V12:41:20.241 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
+V14:11:41.463 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
 1 < 401
 #1 < Content-Type: application/json
 1 < Content-Length: 88
 Y{"errors":[{"httpStatus":401,"domain":"PUT:/users/password","message":"Expired token"}]}
 
->12:41:20.385 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.589 [Test worker] DEBUG com.intuit.karate - request:
 ,1 > POST http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
-1 > Content-Length: 93
+1 > Content-Length: 91
 1 > Host: localhost:8090
 1 > Connection: Keep-Alive
 71 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 "1 > Accept-Encoding: gzip,deflate
-^{"user":{"username":"dario.morarfl","email":"dario.morar@gmail.com","password":"g11j7mewg5"}}
+\{"user":{"username":"quinn.howem4","email":"quinn.howe@gmail.com","password":"lyreprspzf"}}
 
-V12:41:20.395 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
+V14:11:41.599 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
 1 < 201
 #1 < Content-Type: application/json
-1 < Content-Length: 125
-~{"user":{"id":"660ee6406657865341baf8fc","username":"dario.morarfl","password":"g11j7mewg5","email":"dario.morar@gmail.com"}}
+1 < Content-Length: 123
+|{"user":{"id":"662aaaedbbdb361bc6f6be8a","username":"quinn.howem4","password":"lyreprspzf","email":"quinn.howe@gmail.com"}}
 
->12:41:20.412 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.615 [Test worker] DEBUG com.intuit.karate - request:
 ,1 > POST http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 63
@@ -155,13 +252,13 @@
 "1 > Accept-Encoding: gzip,deflate
 @{"user":{"password":"123456789","email":"prueba10@prueba.com"}}
 
-V12:41:20.418 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
+V14:11:41.622 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
 1 < 400
 #1 < Content-Type: application/json
 1 < Content-Length: 97
 b{"errors":[{"httpStatus":400,"domain":"POST:/users","message":"The username field is required"}]}
 
->12:41:20.430 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.632 [Test worker] DEBUG com.intuit.karate - request:
 ,1 > POST http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 55
@@ -171,13 +268,13 @@
 "1 > Accept-Encoding: gzip,deflate
 8{"user":{"username":"prueba10","password":"123456789"}}
 
-V12:41:20.436 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
+V14:11:41.639 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
 1 < 400
 #1 < Content-Type: application/json
 1 < Content-Length: 94
 _{"errors":[{"httpStatus":400,"domain":"POST:/users","message":"The email field is required"}]}
 
->12:41:20.447 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.649 [Test worker] DEBUG com.intuit.karate - request:
 ,1 > POST http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 62
@@ -187,13 +284,13 @@
 "1 > Accept-Encoding: gzip,deflate
 ?{"user":{"username":"prueba10","email":"prueba10@prueba.com"}}
 
-V12:41:20.453 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 5
+V14:11:41.655 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 6
 1 < 400
 #1 < Content-Type: application/json
 1 < Content-Length: 96
 a{"errors":[{"httpStatus":400,"domain":"POST:/users","message":"The password field is require"}]}
 
->12:41:20.465 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.665 [Test worker] DEBUG com.intuit.karate - request:
 ,1 > POST http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 85
@@ -203,25 +300,25 @@
 "1 > Accept-Encoding: gzip,deflate
 V{"user":{"username":"userdelete","password":"123456","email":"userdelete@gmail.com"}}
 
-V12:41:20.474 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
+W14:11:41.677 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 11
 1 < 201
 #1 < Content-Type: application/json
 1 < Content-Length: 117
-v{"user":{"id":"660ee6406657865341baf8fd","username":"userdelete","password":"123456","email":"userdelete@gmail.com"}}
+v{"user":{"id":"662aaaedbbdb361bc6f6be8b","username":"userdelete","password":"123456","email":"userdelete@gmail.com"}}
 
->12:41:20.483 [Test worker] DEBUG com.intuit.karate - request:
-G2 > DELETE http://localhost:8090/api/v1/users/660ee6406657865341baf8fd
+>14:11:41.680 [Test worker] DEBUG com.intuit.karate - request:
+G2 > DELETE http://localhost:8090/api/v1/users/662aaaedbbdb361bc6f6be8b
 2 > Host: localhost:8090
 2 > Connection: Keep-Alive
 72 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 "2 > Accept-Encoding: gzip,deflate
 
 
-V12:41:20.491 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
+W14:11:41.691 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 10
 2 < 204
 
 
->12:41:20.502 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.700 [Test worker] DEBUG com.intuit.karate - request:
 D1 > GET http://localhost:8090/api/v1/users/660b711e8306ec2895e3b3c4
 1 > Host: localhost:8090
 1 > Connection: Keep-Alive
@@ -229,13 +326,13 @@
 "1 > Accept-Encoding: gzip,deflate
 
 
-V12:41:20.509 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
+V14:11:41.707 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
 1 < 200
 #1 < Content-Type: application/json
 1 < Content-Length: 115
 t{"user":{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"}}
 
->12:41:20.518 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.717 [Test worker] DEBUG com.intuit.karate - request:
 31 > GET http://localhost:8090/api/v1/users/1234567
 1 > Host: localhost:8090
 1 > Connection: Keep-Alive
@@ -243,13 +340,13 @@
 "1 > Accept-Encoding: gzip,deflate
 
 
-V12:41:20.525 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
+V14:11:41.725 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
 1 < 404
 #1 < Content-Type: application/json
 1 < Content-Length: 88
 Y{"errors":[{"httpStatus":404,"domain":"GET:/users/1234567","message":"Not found user"}]}
 
->12:41:20.535 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.737 [Test worker] DEBUG com.intuit.karate - request:
 +1 > PUT http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 115
@@ -259,13 +356,13 @@
 "1 > Accept-Encoding: gzip,deflate
 t{"user":{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"}}
 
-V12:41:20.544 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 9
+W14:11:41.749 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 12
 1 < 200
 #1 < Content-Type: application/json
 1 < Content-Length: 115
 t{"user":{"id":"660b711e8306ec2895e3b3c4","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"}}
 
->12:41:20.553 [Test worker] DEBUG com.intuit.karate - request:
+>14:11:41.758 [Test worker] DEBUG com.intuit.karate - request:
 +1 > PUT http://localhost:8090/api/v1/users
 21 > Content-Type: application/json; charset=UTF-8
 1 > Content-Length: 118
@@ -275,7 +372,7 @@
 "1 > Accept-Encoding: gzip,deflate
 w{"user":{"id":"660b711e8306ec2895e3b3c4222","username":"prueba1","password":"123456789","email":"prueba1@prueba.com"}}
 
-V12:41:20.560 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 7
+V14:11:41.767 [Test worker] DEBUG com.intuit.karate - response time in milliseconds: 8
 1 < 404
 #1 < Content-Type: application/json
 1 < Content-Length: 80
@@ -283,20 +380,23 @@
 
 :---------------------------------------------------------
 'feature: classpath:karate/user.feature
-7scenarios: 16 | passed: 16 | failed:  0 | time: 0,5947
+7scenarios: 17 | passed: 17 | failed:  0 | time: 0,4438
 :---------------------------------------------------------
 
-€12:41:21.334 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) classpath:karate/user.feature
+€14:11:42.118 [Test worker] INFO  com.intuit.karate.Suite - <<pass>> feature 2 of 2 (0 remaining) classpath:karate/user.feature
+_14:11:42.120 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 2 features to complete
 Karate version: 1.3.1
 8======================================================
-6elapsed:   3,05 | threads:    1 | thread time: 0,60 
-4features:     1 | skipped:    0 | efficiency: 0,19
--scenarios:   16 | passed:    16 | failed: 0
+6elapsed:   3,40 | threads:    1 | thread time: 0,74 
+4features:     2 | skipped:    0 | efficiency: 0,22
+-scenarios:   21 | passed:    21 | failed: 0
 8======================================================
 
 BHTML report: (paste into browser to view) | Karate version: 1.3.1
 rfile:///C:/Users/Usuario/Documents/Repositorios/Talleres/acceptance-test/build/karate-reports/karate-summary.html
 D===================================================================
 
- Uabr 04, 2024 12:41:21 P.Â M. net.masterthought.cucumber.ReportParser parseJsonFiles
+ Tabr 25, 2024 2:11:42 P.Â M. net.masterthought.cucumber.ReportParser parseJsonFiles
+ ŠINFO: File 'C:\Users\Usuario\Documents\Repositorios\Talleres\acceptance-test\build\karate-reports\karate.log.json' contains 1 feature(s)
+ Tabr 25, 2024 2:11:42 P.Â M. net.masterthought.cucumber.ReportParser parseJsonFiles
  ‹INFO: File 'C:\Users\Usuario\Documents\Repositorios\Talleres\acceptance-test\build\karate-reports\karate.user.json' contains 1 feature(s)

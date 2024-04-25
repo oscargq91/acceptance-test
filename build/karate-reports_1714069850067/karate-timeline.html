@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"Test worker","id":1}];
+var items = [{"id":1,"group":1,"content":"karate\/log[1:14]","start":1714069649545,"end":1714069649941,"title":"karate\/log[1:14] 13:27:29.545-13:27:29.941 Successfully add log"},{"id":2,"group":1,"content":"karate\/user[1:14]","start":1714069650454,"end":1714069650487,"title":"karate\/user[1:14] 13:27:30.454-13:27:30.487 Successfully login"},{"id":3,"group":1,"content":"karate\/user[2.1:30]","start":1714069650494,"end":1714069650513,"title":"karate\/user[2.1:30] 13:27:30.494-13:27:30.513 Failed to login username invalid"},{"id":4,"group":1,"content":"karate\/user[3.1:41]","start":1714069650519,"end":1714069650538,"title":"karate\/user[3.1:41] 13:27:30.519-13:27:30.538 Failed to login username invalid"},{"id":5,"group":1,"content":"karate\/user[4:44]","start":1714069650543,"end":1714069650570,"title":"karate\/user[4:44] 13:27:30.543-13:27:30.570 Successfully get user list"},{"id":6,"group":1,"content":"karate\/user[5:51]","start":1714069650574,"end":1714069650625,"title":"karate\/user[5:51] 13:27:30.574-13:27:30.625 Successfully login and update password"},{"id":7,"group":1,"content":"karate\/user[6.1:79]","start":1714069650631,"end":1714069650650,"title":"karate\/user[6.1:79] 13:27:30.631-13:27:30.650 Failed update password Token malformed"},{"id":8,"group":1,"content":"karate\/user[7.1:91]","start":1714069650655,"end":1714069650678,"title":"karate\/user[7.1:91] 13:27:30.655-13:27:30.678 Failed update password Token Expired"},{"id":9,"group":1,"content":"karate\/user[8:95]","start":1714069650683,"end":1714069650861,"title":"karate\/user[8:95] 13:27:30.683-13:27:30.861 Successfully add user"},{"id":10,"group":1,"content":"karate\/user[9.1:116]","start":1714069650867,"end":1714069650889,"title":"karate\/user[9.1:116] 13:27:30.867-13:27:30.889 Failed add user not username"},{"id":11,"group":1,"content":"karate\/user[10.1:127]","start":1714069650894,"end":1714069650910,"title":"karate\/user[10.1:127] 13:27:30.894-13:27:30.910 Failed add user not email"},{"id":12,"group":1,"content":"karate\/user[11.1:138]","start":1714069650915,"end":1714069650930,"title":"karate\/user[11.1:138] 13:27:30.915-13:27:30.930 Failed add user not password"},{"id":13,"group":1,"content":"karate\/user[12.1:156]","start":1714069650935,"end":1714069650971,"title":"karate\/user[12.1:156] 13:27:30.935-13:27:30.971 Successfully delete user"},{"id":14,"group":1,"content":"karate\/user[13:160]","start":1714069650974,"end":1714069650993,"title":"karate\/user[13:160] 13:27:30.974-13:27:30.993 Successfully get user by ID"},{"id":15,"group":1,"content":"karate\/user[14.1:174]","start":1714069650997,"end":1714069651015,"title":"karate\/user[14.1:174] 13:27:30.997-13:27:31.015 Failed get user by ID"},{"id":16,"group":1,"content":"karate\/user[15:177]","start":1714069651019,"end":1714069651044,"title":"karate\/user[15:177] 13:27:31.019-13:27:31.044 Successfully update user"},{"id":17,"group":1,"content":"karate\/user[16.1:193]","start":1714069651047,"end":1714069651064,"title":"karate\/user[16.1:193] 13:27:31.047-13:27:31.064 failed update user not exist"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

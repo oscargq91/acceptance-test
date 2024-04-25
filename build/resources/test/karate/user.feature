@@ -1,4 +1,4 @@
-Feature: Validate Business Customer Rules in BLM
+Feature: Validate user management
 
   Background:
     * url api.baseUrl
@@ -9,7 +9,7 @@ Feature: Validate Business Customer Rules in BLM
     * def responseError = read("../database/response_error.json")
     * def requestBody = read("../database/body.json")
     * def KarateHelper = Java.type('utils.KarateHelper')
-    
+
   @LoginSuccessfully
   Scenario: Successfully login
     Given path loginPath
@@ -17,6 +17,23 @@ Feature: Validate Business Customer Rules in BLM
     When method Post
     Then status 200
     And match response contains responseSuccessfully.loginResponse
+
+  @LoginSuccessfullyAddLog
+  Scenario: Successfully login add Log
+    Given path loginPath
+    And request requestBody.loginRequest
+    When method Post
+    Then status 200
+    And match response contains responseSuccessfully.loginResponse
+    Given url  'http://localhost:8070/api/v1'
+    And path '/logs/userManagementApiRest'
+    * def date = KarateHelper.generateDate()
+    And header min-date = date
+    When method Get
+    Then status 200
+    And match each response == { id: '#string', application : '#string', type: '#string', timestamp: '#string',module: '#string',summary:'#string', description: '#string' }
+
+
 
   @LoginFailedUsernameInvalid
   Scenario Outline: Failed to login username invalid

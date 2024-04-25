@@ -55,5 +55,14 @@
       "password": "#string",
       "email": "#string"
     }
+  },
+  "log":{
+    "id": "#string",
+    "application": "#string",
+    "type": "#string",
+    "module": "#string",
+    "timestamp": "#string",
+    "summary": "#string",
+    "description": "#string"
   }
 }
