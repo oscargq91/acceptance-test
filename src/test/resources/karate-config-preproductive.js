@@ -4,7 +4,7 @@ function fn() {
     karate.configure('ssl', true);
     var baseUrl = karate.properties['baseUrl'] || 'http://localhost:8090/api/v1'
     var logBaseUrl = karate.properties['logBaseUrl'] || 'http://localhost:8070/api/v1'
-    var healthCheckBaseUrl = karate.properties['healtCheckBaseUrl'] || 'http://localhost:8050'
+    var healthCheckBaseUrl = karate.properties['healthCheckBaseUrl'] || 'http://localhost:8050'
 
     return {
         api: {
