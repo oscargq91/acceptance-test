@@ -64,5 +64,56 @@
     "timestamp": "#string",
     "summary": "#string",
     "description": "#string"
+  },
+  "health": {
+    "components": {
+      "diskSpace": {
+        "details": {
+          "exists": true,
+          "free": "#number",
+          "path": "#string",
+          "threshold": "#number",
+          "total": "#number"
+        },
+        "status": "UP"
+      },
+      "livenessState": {
+        "details": {
+          "from": "#string",
+          "status": "ALIVE",
+          "uptimeSeconds": "#number"
+        },
+        "status": "#string"
+      },
+      "mongo": {
+        "details": {
+          "maxWireVersion": "#number"
+        },
+        "status": "#string"
+      },
+      "ping": {
+        "status": "#string"
+      },
+      "rabbit": {
+        "details": {
+          "version": "#string"
+        },
+        "status": "#string"
+      },
+      "readinessState": {
+        "details": {
+          "from": "#string",
+          "status": "#string",
+          "uptimeSeconds": "#number"
+        },
+        "status": "#string"
+      }
+    },
+    "groups": [
+      "#string",
+      "#string"
+    ],
+    "status": "#string"
   }
+
 }

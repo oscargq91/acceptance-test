@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>25 abr 2024, 14:24</td>
+      <td>06 may 2024, 17:51</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@AddLogSuccessfully</td>
-          <td      class="passed"    >2</td>
-          <td      class="failed"    >1</td>
-          <td     class="skipped"   >2</td>
+          <td      class="passed"    >5</td>
+          <td >0</td>
+          <td >0</td>
           <td >0</td>
           <td >0</td>
           <td class="total">5</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="2819661300">2.819</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="14797500">0.014</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -171,7 +171,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_1748083954.html">karate/log.feature</a>
+      <a href="report-feature_1_1748083954.html">karate/log.feature</a>
     </div>
 
 
@@ -181,12 +181,12 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">2.819</span>
+  <span class="lead-duration duration">0.014</span>
 
 
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Scenario</span>
   <span class="name">Successfully add log</span>
 
@@ -197,16 +197,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details  in ">
+  <div id="element-1" class="collapse collapsable-details ">
 
 
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
 
-<div class="brief failed">
+<div class="brief passed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -216,7 +216,7 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
       <div class="step">
 
 
@@ -274,11 +274,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When failed">
+<div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
   <span class="name">method Post</span>
 
-  <span class="lead-duration duration">2.819</span>
+  <span class="lead-duration duration">0.013</span>
 
 </div>
 
@@ -287,42 +287,31 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
-          <a>http</a>
-      </div>
-      <div id="msg-3" class="collapse collapsable-details  in ">
-        <pre>http call failed after 2773 milliseconds for url: http://api-rest:8070/api/v1/log
-classpath:karate/log.feature:17</pre>
-      </div>
-    </div>
-  </div>
-
 
 
 
   <div class="inner-level">
     <div class="docstring indention">
-      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+      <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
           <a>Doc string</a>
       </div>
-      <div id="msg-4" class="collapse collapsable-details">
-        <pre>14:24:43.728 request:
-1 &gt; POST http://api-rest:8070/api/v1/log
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>17:51:53.794 request:
+1 &gt; POST http://localhost:8070/api/v1/log
 1 &gt; Content-Type: application/json; charset=UTF-8
 1 &gt; Content-Length: 192
-1 &gt; Host: api-rest:8070
+1 &gt; Host: localhost:8070
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.9)
 1 &gt; Accept-Encoding: gzip,deflate
 {&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}
 
-14:24:46.432 java.net.UnknownHostException: Host desconocido (api-rest), http call failed after 2773 milliseconds for url: http://api-rest:8070/api/v1/log
-14:24:46.432 classpath:karate/log.feature:17
-When method Post
-http call failed after 2773 milliseconds for url: http://api-rest:8070/api/v1/log
-classpath:karate/log.feature:17
+17:51:53.806 response time in milliseconds: 12
+1 &lt; 201
+1 &lt; Content-Type: application/json
+1 &lt; Content-Length: 268
+{&quot;id&quot;:&quot;66395f0909fad5644204f078&quot;,&quot;application&quot;:&quot;acceptance-test&quot;,&quot;type&quot;:&quot;INFO&quot;,&quot;module&quot;:&quot;feature&quot;,&quot;timestamp&quot;:&quot;2024-05-06T22:51:53.799026989&quot;,&quot;summary&quot;:&quot;Log prueba&quot;,&quot;description&quot;:&quot;Log generado desde las pruebas de aceptacion para comprobar su correcto funcionamiento&quot;}
+
 </pre>
       </div>
     </div>
@@ -338,7 +327,7 @@ classpath:karate/log.feature:17
       <div class="step">
 
 
-<div class="brief step-name-Then skipped">
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
   <span class="name">status 201</span>
 
@@ -365,7 +354,7 @@ classpath:karate/log.feature:17
       <div class="step">
 
 
-<div class="brief step-name-And skipped">
+<div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
   <span class="name">match response contains responseSuccessfully.log</span>
 
