@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"Test worker","id":1}];
+var items = [{"id":1,"group":1,"content":"karate\/health[1:13]","start":1717113388040,"end":1717113391040,"title":"karate\/health[1:13] 18:56:28.040-18:56:31.040 Successfully add service to be monitored through health tests","className":"failed"},{"id":2,"group":1,"content":"karate\/health[2:23]","start":1717113391047,"end":1717113391062,"title":"karate\/health[2:23] 18:56:31.047-18:56:31.062 check the health status of a registered service that is working well","className":"failed"},{"id":3,"group":1,"content":"karate\/health[3:30]","start":1717113391067,"end":1717113391077,"title":"karate\/health[3:30] 18:56:31.067-18:56:31.077 check the health status of a registered service that is failing","className":"failed"},{"id":4,"group":1,"content":"karate\/health[4:36]","start":1717113391083,"end":1717113391092,"title":"karate\/health[4:36] 18:56:31.083-18:56:31.092 List all services that are being monitored","className":"failed"},{"id":5,"group":1,"content":"karate\/log[1:14]","start":1717113391810,"end":1717113394499,"title":"karate\/log[1:14] 18:56:31.810-18:56:34.499 Successfully add log","className":"failed"},{"id":6,"group":1,"content":"karate\/log[2.1:30]","start":1717113394505,"end":1717113394511,"title":"karate\/log[2.1:30] 18:56:34.505-18:56:34.511 Failed add log","className":"failed"},{"id":7,"group":1,"content":"karate\/log[3:33]","start":1717113394515,"end":1717113394520,"title":"karate\/log[3:33] 18:56:34.515-18:56:34.520 Successfully get user list","className":"failed"},{"id":8,"group":1,"content":"karate\/log[4:41]","start":1717113394524,"end":1717113394529,"title":"karate\/log[4:41] 18:56:34.524-18:56:34.529 Successfully get user list","className":"failed"},{"id":9,"group":1,"content":"karate\/user[1:14]","start":1717113394640,"end":1717113394692,"title":"karate\/user[1:14] 18:56:34.640-18:56:34.692 Successfully login"},{"id":10,"group":1,"content":"karate\/user[2:22]","start":1717113394697,"end":1717113394958,"title":"karate\/user[2:22] 18:56:34.697-18:56:34.958 Successfully login add Log"},{"id":11,"group":1,"content":"karate\/user[3.1:47]","start":1717113394963,"end":1717113394987,"title":"karate\/user[3.1:47] 18:56:34.963-18:56:34.987 Failed to login username invalid"},{"id":12,"group":1,"content":"karate\/user[4.1:58]","start":1717113394992,"end":1717113395013,"title":"karate\/user[4.1:58] 18:56:34.992-18:56:35.013 Failed to login username invalid"},{"id":13,"group":1,"content":"karate\/user[5:61]","start":1717113395018,"end":1717113395078,"title":"karate\/user[5:61] 18:56:35.018-18:56:35.078 Successfully get user list"},{"id":14,"group":1,"content":"karate\/user[6:68]","start":1717113395082,"end":1717113395138,"title":"karate\/user[6:68] 18:56:35.082-18:56:35.138 Successfully login and update password"},{"id":15,"group":1,"content":"karate\/user[7.1:96]","start":1717113395143,"end":1717113395159,"title":"karate\/user[7.1:96] 18:56:35.143-18:56:35.159 Failed update password Token malformed"},{"id":16,"group":1,"content":"karate\/user[8.1:108]","start":1717113395165,"end":1717113395182,"title":"karate\/user[8.1:108] 18:56:35.165-18:56:35.182 Failed update password Token Expired"},{"id":17,"group":1,"content":"karate\/user[9:112]","start":1717113395187,"end":1717113395308,"title":"karate\/user[9:112] 18:56:35.187-18:56:35.308 Successfully add user"},{"id":18,"group":1,"content":"karate\/user[10.1:133]","start":1717113395320,"end":1717113395344,"title":"karate\/user[10.1:133] 18:56:35.320-18:56:35.344 Failed add user not username"},{"id":19,"group":1,"content":"karate\/user[11.1:144]","start":1717113395350,"end":1717113395366,"title":"karate\/user[11.1:144] 18:56:35.350-18:56:35.366 Failed add user not email"},{"id":20,"group":1,"content":"karate\/user[12.1:155]","start":1717113395370,"end":1717113395384,"title":"karate\/user[12.1:155] 18:56:35.370-18:56:35.384 Failed add user not password"},{"id":21,"group":1,"content":"karate\/user[13.1:173]","start":1717113395388,"end":1717113395426,"title":"karate\/user[13.1:173] 18:56:35.388-18:56:35.426 Successfully delete user"},{"id":22,"group":1,"content":"karate\/user[14:177]","start":1717113395430,"end":1717113395452,"title":"karate\/user[14:177] 18:56:35.430-18:56:35.452 Successfully get user by ID"},{"id":23,"group":1,"content":"karate\/user[15.1:191]","start":1717113395456,"end":1717113395474,"title":"karate\/user[15.1:191] 18:56:35.456-18:56:35.474 Failed get user by ID"},{"id":24,"group":1,"content":"karate\/user[16:194]","start":1717113395479,"end":1717113395499,"title":"karate\/user[16:194] 18:56:35.479-18:56:35.499 Successfully update user"},{"id":25,"group":1,"content":"karate\/user[17.1:210]","start":1717113395503,"end":1717113395518,"title":"karate\/user[17.1:210] 18:56:35.503-18:56:35.518 failed update user not exist"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

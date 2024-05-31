@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"Test worker","id":1}];
+var items = [{"id":1,"group":1,"content":"karate\/gateway[1:14]","start":1717114667232,"end":1717114667588,"title":"karate\/gateway[1:14] 19:17:47.232-19:17:47.588 Successfully login and update user and profile"},{"id":2,"group":1,"content":"karate\/gateway[2:31]","start":1717114667594,"end":1717114667633,"title":"karate\/gateway[2:31] 19:17:47.594-19:17:47.633 Successfully login and update user and profile"},{"id":3,"group":1,"content":"karate\/health[1:13]","start":1717114668226,"end":1717114668253,"title":"karate\/health[1:13] 19:17:48.226-19:17:48.253 Successfully add service to be monitored through health tests"},{"id":4,"group":1,"content":"karate\/health[2:23]","start":1717114668258,"end":1717114668278,"title":"karate\/health[2:23] 19:17:48.258-19:17:48.278 check the health status of a registered service that is working well"},{"id":5,"group":1,"content":"karate\/health[3:30]","start":1717114668283,"end":1717114678305,"title":"karate\/health[3:30] 19:17:48.283-19:17:58.305 check the health status of a registered service that is failing"},{"id":6,"group":1,"content":"karate\/health[4:36]","start":1717114678309,"end":1717114678318,"title":"karate\/health[4:36] 19:17:58.309-19:17:58.318 List all services that are being monitored"},{"id":7,"group":1,"content":"karate\/log[1:14]","start":1717114678423,"end":1717114678440,"title":"karate\/log[1:14] 19:17:58.423-19:17:58.440 Successfully add log"},{"id":8,"group":1,"content":"karate\/log[2.1:30]","start":1717114678446,"end":1717114678456,"title":"karate\/log[2.1:30] 19:17:58.446-19:17:58.456 Failed add log"},{"id":9,"group":1,"content":"karate\/log[3:33]","start":1717114678459,"end":1717114678533,"title":"karate\/log[3:33] 19:17:58.459-19:17:58.533 Successfully get user list"},{"id":10,"group":1,"content":"karate\/log[4:41]","start":1717114678537,"end":1717114678557,"title":"karate\/log[4:41] 19:17:58.537-19:17:58.557 Successfully get user list"},{"id":11,"group":1,"content":"karate\/user[1:14]","start":1717114678663,"end":1717114678683,"title":"karate\/user[1:14] 19:17:58.663-19:17:58.683 Successfully login"},{"id":12,"group":1,"content":"karate\/user[2:22]","start":1717114678687,"end":1717114678741,"title":"karate\/user[2:22] 19:17:58.687-19:17:58.741 Successfully login add Log"},{"id":13,"group":1,"content":"karate\/user[3.1:47]","start":1717114678744,"end":1717114678757,"title":"karate\/user[3.1:47] 19:17:58.744-19:17:58.757 Failed to login username invalid"},{"id":14,"group":1,"content":"karate\/user[4.1:58]","start":1717114678761,"end":1717114678778,"title":"karate\/user[4.1:58] 19:17:58.761-19:17:58.778 Failed to login username invalid"},{"id":15,"group":1,"content":"karate\/user[5:61]","start":1717114678782,"end":1717114678803,"title":"karate\/user[5:61] 19:17:58.782-19:17:58.803 Successfully get user list"},{"id":16,"group":1,"content":"karate\/user[6:68]","start":1717114678807,"end":1717114678839,"title":"karate\/user[6:68] 19:17:58.807-19:17:58.839 Successfully login and update password"},{"id":17,"group":1,"content":"karate\/user[7.1:96]","start":1717114678843,"end":1717114678853,"title":"karate\/user[7.1:96] 19:17:58.843-19:17:58.853 Failed update password Token malformed"},{"id":18,"group":1,"content":"karate\/user[8.1:108]","start":1717114678856,"end":1717114678866,"title":"karate\/user[8.1:108] 19:17:58.856-19:17:58.866 Failed update password Token Expired"},{"id":19,"group":1,"content":"karate\/user[9:112]","start":1717114678869,"end":1717114678979,"title":"karate\/user[9:112] 19:17:58.869-19:17:58.979 Successfully add user"},{"id":20,"group":1,"content":"karate\/user[10.1:133]","start":1717114678984,"end":1717114679001,"title":"karate\/user[10.1:133] 19:17:58.984-19:17:59.001 Failed add user not username"},{"id":21,"group":1,"content":"karate\/user[11.1:144]","start":1717114679006,"end":1717114679017,"title":"karate\/user[11.1:144] 19:17:59.006-19:17:59.017 Failed add user not email"},{"id":22,"group":1,"content":"karate\/user[12.1:155]","start":1717114679021,"end":1717114679030,"title":"karate\/user[12.1:155] 19:17:59.021-19:17:59.030 Failed add user not password"},{"id":23,"group":1,"content":"karate\/user[13.1:173]","start":1717114679035,"end":1717114679061,"title":"karate\/user[13.1:173] 19:17:59.035-19:17:59.061 Successfully delete user"},{"id":24,"group":1,"content":"karate\/user[14:177]","start":1717114679064,"end":1717114679076,"title":"karate\/user[14:177] 19:17:59.064-19:17:59.076 Successfully get user by ID"},{"id":25,"group":1,"content":"karate\/user[15.1:191]","start":1717114679080,"end":1717114679091,"title":"karate\/user[15.1:191] 19:17:59.080-19:17:59.091 Failed get user by ID"},{"id":26,"group":1,"content":"karate\/user[16:194]","start":1717114679094,"end":1717114679109,"title":"karate\/user[16:194] 19:17:59.094-19:17:59.109 Successfully update user"},{"id":27,"group":1,"content":"karate\/user[17.1:210]","start":1717114679113,"end":1717114679126,"title":"karate\/user[17.1:210] 19:17:59.113-19:17:59.126 failed update user not exist"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

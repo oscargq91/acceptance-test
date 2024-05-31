@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>taller_api_rest</td>
-      <td>06 may 2024, 17:51</td>
+      <td>30 may 2024, 19:21</td>
     </tr>
   </tbody>
 </table>
@@ -127,18 +127,18 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@CheckServicehealthSuccessfully</td>
-          <td      class="passed"    >4</td>
+          <td      class="passed"    >3</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">4</td>
+          <td class="total">3</td>
 
           <td  class="passed"    >1</td>
           <td >0</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="29729200">0.029</td>
+          <td class="duration" data-value="13846000">0.013</td>
           <td class="passed">Passed</td>
         </tr>
         </tbody>
@@ -171,7 +171,7 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2549621084.html">karate/health.feature</a>
+      <a href="report-feature_1_2549621084.html">karate/health.feature</a>
     </div>
 
 
@@ -181,7 +181,7 @@ $(document).ready(function() {
 </div>
 
 
-  <span class="lead-duration duration">0.029</span>
+  <span class="lead-duration duration">0.013</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
@@ -224,7 +224,7 @@ $(document).ready(function() {
   <span class="keyword indention">Given</span>
   <span class="name">path serviceHealthPath + &quot;/apiRest&quot;</span>
 
-  <span class="lead-duration duration">0.006</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -251,7 +251,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">method Get</span>
 
-  <span class="lead-duration duration">0.016</span>
+  <span class="lead-duration duration">0.013</span>
 
 </div>
 
@@ -269,7 +269,7 @@ $(document).ready(function() {
           <a>Doc string</a>
       </div>
       <div id="msg-3" class="collapse collapsable-details">
-        <pre>17:51:43.100 request:
+        <pre>19:21:42.932 request:
 1 &gt; GET http://localhost:8050/health/apiRest
 1 &gt; Host: localhost:8050
 1 &gt; Connection: Keep-Alive
@@ -277,14 +277,14 @@ $(document).ready(function() {
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-17:51:43.114 response time in milliseconds: 13
+19:21:42.944 response time in milliseconds: 11
 1 &lt; 200
 1 &lt; Server: Werkzeug/3.0.2 Python/3.9.19
-1 &lt; Date: Mon, 06 May 2024 22:51:43 GMT
+1 &lt; Date: Fri, 31 May 2024 00:21:42 GMT
 1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 572
+1 &lt; Content-Length: 611
 1 &lt; Connection: close
-{&quot;components&quot;:{&quot;diskSpace&quot;:{&quot;details&quot;:{&quot;exists&quot;:true,&quot;free&quot;:242948567040,&quot;path&quot;:&quot;/.&quot;,&quot;threshold&quot;:10485760,&quot;total&quot;:269490393088},&quot;status&quot;:&quot;UP&quot;},&quot;livenessState&quot;:{&quot;details&quot;:{&quot;from&quot;:&quot;2024-05-06T21:08:05.296616367&quot;,&quot;status&quot;:&quot;ALIVE&quot;,&quot;uptimeSeconds&quot;:6222},&quot;status&quot;:&quot;UP&quot;},&quot;mongo&quot;:{&quot;details&quot;:{&quot;maxWireVersion&quot;:13},&quot;status&quot;:&quot;UP&quot;},&quot;ping&quot;:{&quot;status&quot;:&quot;UP&quot;},&quot;rabbit&quot;:{&quot;details&quot;:{&quot;version&quot;:&quot;3.11.11&quot;},&quot;status&quot;:&quot;UP&quot;},&quot;readinessState&quot;:{&quot;details&quot;:{&quot;from&quot;:&quot;2024-05-06T21:08:05.298227742&quot;,&quot;status&quot;:&quot;ALIVE&quot;,&quot;uptimeSeconds&quot;:6222},&quot;status&quot;:&quot;UP&quot;}},&quot;groups&quot;:[&quot;liveness&quot;,&quot;readiness&quot;],&quot;status&quot;:&quot;UP&quot;}
+{&quot;components&quot;:{&quot;circuitBreakers&quot;:{&quot;status&quot;:&quot;UNKNOWN&quot;},&quot;diskSpace&quot;:{&quot;details&quot;:{&quot;exists&quot;:true,&quot;free&quot;:238875189248,&quot;path&quot;:&quot;/.&quot;,&quot;threshold&quot;:10485760,&quot;total&quot;:269490393088},&quot;status&quot;:&quot;UP&quot;},&quot;livenessState&quot;:{&quot;details&quot;:{&quot;from&quot;:&quot;2024-05-30T23:47:58.947629059&quot;,&quot;status&quot;:&quot;ALIVE&quot;,&quot;uptimeSeconds&quot;:2027},&quot;status&quot;:&quot;UP&quot;},&quot;mongo&quot;:{&quot;details&quot;:{&quot;maxWireVersion&quot;:13},&quot;status&quot;:&quot;UP&quot;},&quot;ping&quot;:{&quot;status&quot;:&quot;UP&quot;},&quot;rabbit&quot;:{&quot;details&quot;:{&quot;version&quot;:&quot;3.11.11&quot;},&quot;status&quot;:&quot;UP&quot;},&quot;readinessState&quot;:{&quot;details&quot;:{&quot;from&quot;:&quot;2024-05-30T23:47:58.954951125&quot;,&quot;status&quot;:&quot;ALIVE&quot;,&quot;uptimeSeconds&quot;:2027},&quot;status&quot;:&quot;UP&quot;}},&quot;groups&quot;:[&quot;liveness&quot;,&quot;readiness&quot;],&quot;status&quot;:&quot;UP&quot;}
 
 
 </pre>
@@ -307,33 +307,6 @@ $(document).ready(function() {
   <span class="name">status 200</span>
 
   <span class="lead-duration duration">0.000</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">match response contains responseSuccessfully.health</span>
-
-  <span class="lead-duration duration">0.007</span>
 
 </div>
 

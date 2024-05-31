@@ -58,5 +58,27 @@
       "password": "123456789",
       "email": "prueba1@prueba.com"
     }
+  },
+  "requestInfo": {
+    "user": {
+      "id": "664fbdabfb1def6ebdb1ec0a",
+      "username": "ximeni",
+      "password": "140491",
+      "email": "prueba@prueba2.com"
+    },
+    "profile": {
+      "username": "ximeni",
+      "personalPageUrl": "https://www.johndoe.com",
+      "nickname": "Johnny",
+      "contactInfoPublic": true,
+      "mailingAddress": "123 Main St, Anytown, USA",
+      "biography": "Software developer with 10 years of experience in web development.",
+      "organization": "Tech Corp",
+      "country": "USA",
+      "socialNetworks": [
+        "https://twitter.com/johndoe",
+        "https://www.linkedin.com/in/johndoe"
+      ]
+    }
   }
 }

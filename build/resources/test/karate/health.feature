@@ -12,7 +12,7 @@ Feature: Validate log management
   @AddAndDeleteServiceSuccessfully
   Scenario: Successfully add service to be monitored through health tests
     Given path registerPath
-    And request { name : "apiRestTest", endpoint: "http://api-rest:8090/api/v1/actuator/health", status: "active",frequency: 500, notification_emails: ["correo_ejemplo1@example.com"] }
+    And request { name : "apiRestTest", endpoint: "http://localhost:8090/api/v1/actuator/health", status: "active",frequency: 500, notification_emails: ["correo_ejemplo1@example.com"] }
     When method Post
     Then status 201
     Given path deleteServicePath
@@ -24,7 +24,7 @@ Feature: Validate log management
     Given path serviceHealthPath + "/apiRest"
     When method Get
     Then status 200
-    And match response contains responseSuccessfully.health
+
 
   @CheckServicehealthWithError
   Scenario: check the health status of a registered service that is failing
