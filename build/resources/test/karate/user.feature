@@ -25,7 +25,7 @@ Feature: Validate user management
     When method Post
     Then status 200
     And match response contains responseSuccessfully.loginResponse
-    Given url  'http://localhost:8070/api/v1'
+    Given url  'http://logs-rest:8070/api/v1'
     And path '/logs/userManagementApiRest'
     * def date = KarateHelper.generateDate()
     And header min-date = date

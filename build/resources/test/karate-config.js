@@ -3,11 +3,9 @@ function fn() {
     karate.configure('readTimeout', 20000);
     karate.configure('ssl', true);
     var baseUrl = karate.properties['baseUrl'] || 'http://localhost:8090/api/v1'
-    var logBaseUrl = karate.properties['logBaseUrl'] || 'http://localhost:8070/api/v1'
-    var healthCheckBaseUrl = karate.properties['healthCheckBaseUrl'] || 'http://localhost:8050'
-    //    var logBaseUrl = karate.properties['logBaseUrl'] || 'http://logs-rest:8070/api/v1'
-    //     var healthCheckBaseUrl = karate.properties['healthCheckBaseUrl'] || 'http://health-rest:8050'
-    var gatewayUrl = karate.properties['gatewayUrl'] || 'http://localhost:80/api/v1'
+    var logBaseUrl = karate.properties['logBaseUrl'] || 'http://logs-rest:8070/api/v1'
+    var healthCheckBaseUrl = karate.properties['healthCheckBaseUrl'] || 'http://health-rest:8050'
+    var gatewayUrl = karate.properties['gatewayUrl'] || 'http://api-rest:8090/api/v1'
 
     return {
         api: {
